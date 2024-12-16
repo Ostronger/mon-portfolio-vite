@@ -1,0 +1,173 @@
+/* Conteneur principal de la barre de navigation */
+.container {
+  position: fixed; /* Fixe la barre de navigation en haut */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Au-dessus des autres éléments */
+  display: flex; /* Aligne les enfants horizontalement */
+  justify-content: space-around; /* Espace entre le logo et le menu */
+  align-items: center; /* Centre verticalement */
+  border-radius: 1px; /* Coins arrondis */
+  box-shadow: var(--shadow-navbar-color); /* Ombre subtile */
+  padding: 1rem; /* Espacement interne */
+  backdrop-filter: blur(10px); /* Effet de flou derrière la barre */
+  background: var(--bg-menu-color); /* Fond noir avec une opacité de 70% */
+  animation: mynav 2s ease 0s 1 normal forwards;
+}
+
+@keyframes mynav {
+	0% {
+		transform: scale(0);
+		transform-origin: 50% 0%;
+	}
+
+	100% {
+		transform: scale(1);
+		transform-origin: 50% 0%;
+	}
+}
+  
+
+
+/* Logo */
+.logo {
+  font-size: 1.5rem; /* Taille de la police */
+  font-weight: bold; /* Texte en gras */
+  display: none; /* Caché par défaut */
+}
+
+/* Bouton pour changer le thème */
+.themeToggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color); /* Couleur dynamique */
+  }
+
+
+/* Bouton hamburger */
+.hamburger {
+  font-size: 1.5rem; /* Taille de l'icône */
+  background: none; /* Aucun fond */
+  border: none; /* Pas de bordure */
+  color: var(--text-color); /* Couleur de l'icône */
+  cursor: pointer; /* Curseur en forme de main */
+  display: none; /* Masqué par défaut */
+}
+.hamburger:hover {
+  transform: scale(1.1); /* Agrandissement léger au survol */
+}
+
+
+/* Menu principal */
+.menu {
+  display: flex; /* Aligne les liens horizontalement */
+}
+
+/* Liens du menu */
+.menu p {
+  color: var(--text-color); /* Couleur du texte */
+  font-size: 1rem; /* Taille de la police */
+  margin: 0; /* Pas d'espacement externe */
+  padding: 0.5rem 1rem; /* Espacement interne */
+  cursor: pointer; /* Curseur en forme de main */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Transition fluide */
+}
+
+/* Effets au survol des liens */
+.menu p:hover {
+  color: #ffcc00; /* Couleur jaune au survol */
+  background-color: var(--bg-font-hover); /* Fond translucide */
+  border-radius: 5px; /* Coins arrondis */
+}
+
+/* Responsive : Cacher le menu sur mobile */
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Masqué par défaut */
+    flex-direction: column; /* Aligne les liens verticalement */
+    background: var(--bg-menu-color);/* Fond avec une opacité de 70% */
+    backdrop-filter: blur(10px); /* Effet de flou derrière */
+    -webkit-backdrop-filter: blur(10px); /* Pour Safari */
+    position:absolute; /* Position relative à son parent */
+    top: 100%; /* Juste en dessous de la barre de navigation */
+    left: 0;
+    right: 0;
+    padding: 1rem 0; /* Espacement interne vertical */
+    z-index: 100; /* Au-dessus des autres éléments */
+  }
+
+  /* Menu visible (après clic sur le bouton hamburger) */
+  .menuOpen {
+    display: flex; /* Afficher les liens */
+    animation: mymenu 2s ease 0s 1 normal forwards;
+  }
+
+  @keyframes mymenu {
+    0% {
+      animation-timing-function: ease-in;
+      opacity: 0;
+      transform: translateY(-250px);
+    }
+  
+    38% {
+      animation-timing-function: ease-out;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    55% {
+      animation-timing-function: ease-in;
+      transform: translateY(-65px);
+    }
+  
+    72% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  
+    81% {
+      animation-timing-function: ease-in;
+      transform: translateY(-28px);
+    }
+  
+    90% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  
+    95% {
+      animation-timing-function: ease-in;
+      transform: translateY(-8px);
+    }
+  
+    100% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  }
+
+  /* Liens du menu déroulant */
+  .menu p {
+    padding: 1rem; /* Espacement interne pour les liens */
+    text-align: center; /* Centrer le texte */
+  }
+}
+
+/* Afficher le logo uniquement sur mobile */
+@media (max-width: 768px) {
+  .logo {
+    display: flex; /* Afficher sur mobile */
+    margin-left: 1rem; /* Espacement à gauche */
+    color: var(--text-color);
+  }
+}
+
+/* Afficher le bouton hamburger uniquement sur mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Afficher sur mobile */
+  }
+}

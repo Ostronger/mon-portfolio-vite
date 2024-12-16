@@ -1,0 +1,58 @@
+/* Conteneur des cartes */
+.cardContainer {
+  display: flex; /* Aligne les cartes horizontalement */
+  flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+  justify-content: center; /* Centre les cartes horizontalement */
+  gap: 1rem; /* Espacement entre les cartes */
+  padding: 2rem; /* Espacement interne autour du conteneur */
+}
+
+/* Style de base pour chaque carte */
+.card {
+  background-color: var(--secondary-bg-color); /* Couleur de fond dynamique (par thème) */
+  color: var(--text-color); /* Couleur du texte dynamique (par thème) */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: var(--shadow-color); /* Ombre dynamique */
+  overflow: hidden; /* Empêche le débordement du contenu */
+  max-width: 400px; /* Largeur maximale pour chaque carte */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide pour les effets */
+}
+
+/* Image de la carte */
+.cardImage {
+  width: 100%; /* L'image prend toute la largeur de la carte */
+  height: auto; /* Ajuste automatiquement la hauteur */
+  object-fit: cover; /* Ajuste l'image sans déformation */
+}
+
+/* Contenu de la carte */
+.cardContent {
+  padding: 1rem; /* Espacement interne */
+}
+
+/* Titre de la carte */
+.cardTitle {
+  font-size: 1.5rem; /* Taille de la police */
+  font-weight: bold; /* Texte en gras */
+  margin-bottom: 0.5rem; /* Espacement en bas */
+}
+
+/* Description de la carte */
+.cardDescription {
+  font-size: 1rem; /* Taille standard de la police */
+  line-height: 1.5; /* Espacement entre les lignes */
+  margin: 0; /* Pas d'espacement externe */
+}
+
+/* Effet au survol de la carte */
+.card:hover {
+  transform: translateY(-5px); /* Soulève légèrement la carte */
+  box-shadow: var(--shadow-navbar-color); /* Accentue l'ombre au survol */
+}
+
+/* Styles responsives pour les petits écrans */
+@media (max-width: 768px) {
+  .card {
+    max-width: 90%; /* Les cartes prennent presque toute la largeur */
+  }
+}

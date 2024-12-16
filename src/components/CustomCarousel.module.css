@@ -1,0 +1,115 @@
+/* Conteneur principal */
+.carouselContainer {
+  display: flex;
+  align-items: center; /* Aligne les flèches verticalement */
+  justify-content: center;
+  position: relative;
+  max-width: 700px; /* Largeur maximale */
+  margin: 0 auto; /* Centre horizontalement */
+  overflow: hidden; /* Cache les éléments hors du cadre */
+}
+
+/* Boutons de navigation */
+.arrow {
+  position: absolute;
+  top: 50%; /* Centre verticalement */
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 100; /* Au-dessus des images */
+  color: var(--highlight-color); /* Couleur dynamique */
+}
+
+.arrow:hover {
+  color: var(--text-color); /* Change de couleur au survol */
+}
+
+/* Flèche gauche */
+.arrow:first-child {
+  left: 10px; /* Position à gauche */
+}
+
+/* Flèche droite */
+.arrow:last-child {
+  right: 10px; /* Position à droite */
+}
+
+/* Contenu du carrousel */
+.carouselContent {
+  display: flex;
+  transition: transform 0.5s ease; /* Transition fluide */
+  transform: translateX(calc(var(--index) * -100%)); /* Glisse horizontalement */
+}
+
+/* Slide individuel */
+.slide {
+  flex: 0 0 100%; /* Chaque slide prend 100% de la largeur */
+  opacity: 0; /* Caché par défaut */
+  transition: opacity 0.5s ease; /* Transition fluide pour l'apparition */
+  text-align: center;
+}
+
+.slide.active {
+  opacity: 1; /* Affiché lorsque actif */
+}
+
+/* Image */
+.image {
+  max-width: 100%; /* L'image prend toute la largeur */
+  max-height: 300px; /* Hauteur maximale */
+  object-fit: cover; /* Ajuste l'image sans déformer */
+  border-radius: 10px; /* Coins arrondis */
+}
+
+/* Texte */
+.text {
+  margin-top: 1rem;
+}
+
+.text h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.text p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Media queries */
+
+/* Écrans petits */
+@media (max-width: 768px) {
+  .carouselContainer {
+    max-width: 90%; /* Réduit la largeur */
+  }
+
+  .image {
+    max-height: 200px; /* Diminue la hauteur maximale des images */
+  }
+
+  .arrow {
+    font-size: 1.5rem; /* Réduit la taille des flèches */
+  }
+
+  .text h2 {
+    font-size: 1.2rem; /* Diminue la taille des titres */
+  }
+
+  .text p {
+    font-size: 0.9rem; /* Diminue la taille de la description */
+  }
+}
+
+/* Écrans très grands */
+@media (min-width: 1200px) {
+  .carouselContainer {
+    max-width: 1000px; /* Augmente la largeur du carrousel */
+  }
+
+  .image {
+    max-height: 400px; /* Augmente la hauteur maximale des images */
+  }
+}

@@ -1,0 +1,272 @@
+.cardPrincipal {
+  width: 90%; /* Utilisation d'une largeur relative pour les écrans plus petits */
+  max-width: 1200px; /* Largeur maximale pour les écrans larges */
+  height: auto; /* Ajuste automatiquement à la hauteur du contenu */
+  border-radius: 20px; /* Coins plus arrondis pour un design moderne */
+  box-shadow: var(--shadow-navbar-color); /* Ombre subtile pour créer de la profondeur */
+  display: flex; /* Flexbox pour une mise en page structurée */
+  flex-direction: row; /* Met l'image et le contenu côte à côte */
+  align-items: stretch; /* Étend l'image et le contenu à la même hauteur */
+  gap: 8px; /* Espacement entre les sections */
+  padding: 20px; /* Espacement interne */
+  margin: 0 auto; /* Centre le carrousel horizontalement */
+  position: relative; /* Nécessaire pour les éléments positionnés en absolu */
+  overflow: hidden; /* Cache les débordements éventuels */
+  transition: all 0.3s ease-in-out; /* Animation lors du redimensionnement */
+  animation: mycard 2s ease 0s 1 normal forwards;
+}
+
+@keyframes mycard {
+	0% {
+		transform: scaleY(0);
+		transform-origin: 100% 0%;
+	}
+
+	100% {
+		transform: scaleY(1);
+		transform-origin: 100% 0%;
+	}
+}
+
+.contentWidget {
+    flex:1;
+    display: flex; /* Utilisation de Flexbox pour organiser le contenu */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: center; /* Centrage vertical des enfants */
+    gap: 16px; /* Espacement uniforme entre chaque élément */
+    width: 100%; /* Occupe toute la largeur disponible */
+    padding: 0px; /* Ajoute un espacement interne */
+  }
+
+  .caption {
+    display: flex; /* Utilisation de Flexbox pour aligner la ligne et le sous-titre */
+    align-items: center; /* Centre verticalement les éléments */
+    gap: 8px; /* Espacement entre la ligne et le texte */
+    width: 100%; /* Occupe toute la largeur disponible */
+  }
+
+  .titreProduct {
+    width: 100%; /* Occupe toute la largeur */
+    margin-top: 0px; /* Ajoute un espacement au-dessus */
+  }
+  
+  
+
+  .productDetails {
+    flex: 1; /* Prend 50% de l'espace disponible */
+    width: 100%; /* Occupe toute la largeur disponible */
+    display: flex; 
+    justify-content: center; /* Centre l'image horizontalement */
+    align-items: center; /* Centre l'image verticalement */  
+    margin: 0; /* Supprime toute marge supplémentaire */
+    padding: 0;
+   
+  }
+  
+  .productImage {
+    width: 100%; /* Adapte la largeur à celle du conteneur */
+    height: 100%; /* Limite la hauteur de l'image */
+    object-fit: cover; /* Ajuste l'image sans déformation */
+    border-radius: 10px; /* Coins arrondis pour un design moderne */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px; /* Ombre subtile pour créer de la profondeur */
+  }
+
+  /* Titre */
+.titreName {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--Gray-900, #191C1F);
+  line-height: 1.2;
+}
+
+/***** Conteneur principal de la description *****/
+.description {
+  width: 100%; /* Prend toute la largeur disponible */
+  max-width: 100%; /* Empêche tout dépassement */
+  padding: 20px; /* Espacement interne autour du contenu */
+  background-color: var(--secondary-bg-color); /* Couleur de fond (utilise la variable CSS pour la personnalisation) */
+  border-radius: 10px; /* Coins arrondis pour un design plus doux */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre pour la profondeur */
+  overflow: hidden; /* Empêche le contenu de déborder */
+  display: flex; /* Utilisation de flex pour plus de contrôle */
+  flex-direction: column; /* Les éléments enfants s'empilent verticalement */
+  gap: 20px; /* Espace entre les sections internes */
+}
+
+/***** Texte principal de la description *****/
+.descriptionProduct {
+  font-size: 1rem; /* Taille de la police de base */
+  color: var(--Gray-700, #475156); /* Couleur du texte principale (variable CSS personnalisable) */
+  line-height: 1.6; /* Espacement vertical entre les lignes pour une meilleure lisibilité */
+  margin-bottom: 0px; /* Espace en bas du texte */
+  text-align: justify; /* Justifie le texte pour une apparence plus propre */
+  letter-spacing: 0.5px; /* Légère espacement entre les lettres */
+  animation: fadeIn 0.8s ease-in; /* Animation fluide à l'affichage */
+}
+
+/***** Liste des points dans la description *****/
+.descriptionList {
+  margin-top: 20px; /* Espace au-dessus de la liste */
+  padding-left: 20px; /* Indentation de la liste (espace à gauche) */
+}
+
+.descriptionList li {
+  font-size: 1rem; /* Taille de la police pour chaque élément de la liste */
+  color: var(--text-color); /* Couleur du texte (peut être dynamique selon le mode jour/nuit) */
+  line-height: 1.6; /* Espacement entre les lignes pour une meilleure lisibilité */
+  margin-bottom: 10px; /* Espace en bas de chaque élément de la liste */
+  display: flex; /* Flexbox pour afficher l'icône et le texte sur la même ligne */
+  align-items: center; /* Aligne verticalement l'icône et le texte */
+}
+
+.descriptionList li::before {
+  content: '✔️ '; /* Icône de validation avant chaque élément de la liste */
+  color: var(--Primary-500, #FA8232); /* Couleur dynamique du symbole (variable CSS) */
+  font-weight: bold; /* Icône en gras */
+  margin-right: 8px; /* Espace entre l'icône et le texte */
+  font-size: 1.2rem; /* Taille légèrement supérieure pour le rendre visible */
+}
+
+/***** Animation douce sur la description *****/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  .animated {
+    animation: mycard-image 0.5s ease-in 0s 1 normal forwards;
+  }
+  
+  @keyframes mycard-image {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .dotsNavigation {
+    display: flex; /* Flexbox pour aligner les points horizontalement */
+    gap: 8px; /* Espacement entre les points */
+    position: absolute; /* Positionné par rapport au conteneur parent */
+    bottom: 10px; /* Distance du bas du conteneur principal */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Corrige le centrage */
+    z-index: 10; /* Met les points au-dessus des autres éléments */
+    animation: mycard-image 2s ease 0s 1 normal forwards;
+  }
+
+  .dot {
+    width: 5px; /* Taille du point */
+    height: 5px; /* Taille du point */
+    background-color: var(--Gray-300, #ADB7BC); /* Couleur de fond par défaut */
+    border-radius: 50%; /* Forme circulaire */
+    cursor: pointer; /* Change le curseur au survol */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animation fluide */
+  }
+  
+  .dot:hover {
+    background-color: var(--Gray-500, #8A979E); /* Change légèrement la couleur au survol */
+    transform: scale(1.2); /* Augmente légèrement la taille au survol */
+  }
+  
+  .dot.active {
+    background-color: var(--Primary-500, #FA8232); /* Couleur active pour le point sélectionné */
+  }
+
+
+  @media (max-width: 768px) {
+    .cardPrincipal {
+      width: 95%; /* Augmente la largeur relative sur petits écrans */
+      padding: 15px; /* Réduit l'espacement interne */
+      border-radius: 10px; /* Réduit les coins arrondis */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cardPrincipal {
+      gap: 10px; /* Réduit l'espacement entre les sections */
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 6px; /* Atténue l'ombre sur mobiles */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contentWidget {
+      padding: 15px; /* Réduit l’espacement interne sur tablettes */
+      gap: 12px; /* Réduit l’espace entre les éléments */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contentWidget {
+      padding: 10px; /* Moins d’espace sur mobiles */
+      gap: 8px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .titreName {
+      font-size: 1.5rem; /* Réduit la taille du titre sur tablettes */
+    }
+  
+    .descriptionProduct {
+      font-size: 0.9rem; /* Réduit la taille du texte sur tablettes */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .titreName {
+      font-size: 1.2rem; /* Taille plus compacte pour mobiles */
+    }
+  
+    .descriptionProduct {
+      font-size: 0.8rem; /* Taille plus petite pour optimiser l'espace */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cardShop {
+      padding: 10px 20px; /* Réduit la taille du bouton */
+      font-size: 0.9rem; /* Diminue la taille du texte */
+    }
+  
+    .productImage {
+      max-height: 250px; /* Limite la hauteur de l'image sur tablettes */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cardShop {
+      padding: 8px 16px; /* Bouton encore plus compact */
+      font-size: 0.8rem; /* Réduction supplémentaire de la taille du texte */
+    }
+  
+    .productImage {
+      max-height: 200px; /* Réduit la taille de l'image pour mobiles */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .dot {
+      width: 10px; /* Taille réduite des points sur tablettes */
+      height: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dot {
+      width: 8px; /* Points encore plus petits sur mobiles */
+      height: 8px;
+    }
+  }
+

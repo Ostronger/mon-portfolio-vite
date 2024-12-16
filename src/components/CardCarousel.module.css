@@ -1,0 +1,44 @@
+/* Conteneur du carrousel */
+.carouselContainer {
+  max-width: 800px;
+  margin: 0 auto; /* Centrer horizontalement */
+  padding: 0rem; /* Espacement autour */
+}
+
+/* Style de chaque carte */
+.card {
+  background-color: var(--secondary-bg-color); /* Couleur de fond dynamique */
+  color: var(--text-color); /* Couleur de texte dynamique */
+  border-radius: 20px; /* Coins arrondis */
+ /* Ombre dynamique */
+  overflow: hidden; /* Empêche le débordement */
+  padding: 1rem; /* Espacement interne */
+  text-align: center; /* Centre le texte */
+}
+
+/* Image de la carte */
+.cardImage {
+  width: 15%;
+  max-width:800px; /* L'image prend toute la largeur */
+  
+  object-fit: cover; /* Ajuste l'image sans la déformer */
+  border-radius: 10px 10px 0 0; /* Arrondi uniquement les coins supérieurs */
+}
+
+/* Contenu de la carte */
+.cardContent {
+  padding: 1rem; /* Espacement interne */
+}
+
+/* Titre de la carte */
+.cardTitle {
+  font-size: 1.5rem; /* Taille de police */
+  font-weight: bold; /* Gras */
+  margin-bottom: 0.5rem; /* Espacement en bas */
+}
+
+/* Description de la carte */
+.cardDescription {
+  font-size: 1rem; /* Taille standard de la police */
+  line-height: 1.5; /* Espacement entre les lignes */
+}

@@ -1,0 +1,49 @@
+.pageContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-image: var(--secondary-bg-image);
+  background-blend-mode:var(--bg-blend-mode); /* Fond blanc */
+  margin: 2rem auto; /* Centrer horizontalement */
+  padding: 2rem; /* Espacement interne */
+  border-radius: 1px; /* Coins arrondis */
+  box-shadow: var(--shadow-color);
+  text-align: center; /* Centrer le texte */
+  position: relative;
+}
+
+/* Animation de gradient pour le h1 */
+h1 {
+  font-size: 3rem; /* Taille élégante */
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff5e62); /* Gradient dynamique */
+  background-size: 200%; /* Étendre le gradient pour l'animation */
+  -webkit-background-clip: text; /* Clip pour ne montrer que le texte */
+  -webkit-text-fill-color: transparent; /* Rendre le reste transparent */
+  animation: myAnim 2s ease 0s 1 normal forwards; /* Animation continue */
+  margin: 0;
+}
+
+/* Style animé pour le h2 */
+h2 {
+  font-size: 2rem; /* Taille légèrement plus petite que le h1 */
+  font-weight: 500;
+  color: #ffffff; /* Texte blanc */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 0, 150, 0.6);
+  animation: myAnim 2s ease 0s 1 normal forwards; /* Animation continue */
+}
+
+/* Animation keyframes pour l'entrance */
+@keyframes myAnim {
+	0% {
+		transform: scale(0.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+
+
