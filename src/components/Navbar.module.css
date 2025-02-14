@@ -6,7 +6,7 @@
   right: 0;
   z-index: 1000; /* Au-dessus des autres éléments */
   display: flex; /* Aligne les enfants horizontalement */
-  justify-content: space-around; /* Espace entre le logo et le menu */
+  justify-content: space-between; /* Espace entre le logo et le menu */
   align-items: center; /* Centre verticalement */
   border-radius: 1px; /* Coins arrondis */
   box-shadow: var(--shadow-navbar-color); /* Ombre subtile */
@@ -27,24 +27,72 @@
 		transform-origin: 50% 0%;
 	}
 }
-  
 
 
-/* Logo */
-.logo {
-  font-size: 1.5rem; /* Taille de la police */
-  font-weight: bold; /* Texte en gras */
-  display: none; /* Caché par défaut */
+/* Logo (visible seulement sur mobile)*/  
+.left {
+  display: flex; 
+  align-items: center; 
 }
 
-/* Bouton pour changer le thème */
-.themeToggle {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--text-color); /* Couleur dynamique */
-  }
+.logoText {
+  font-size: 1.5rem; /* Taille de la police */
+  font-weight: bold; /* Texte en gras */
+  display: none; /*  Masqué en bureau */
+}
+
+
+
+
+  /* Conteneur principal */
+.toggleContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* Bouton toggle */
+.toggleButton {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Slider interne */
+.slider {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Mode actif (nuit) */
+.toggleButton.active {
+  background-color: #2d74da; /* Fond en mode nuit */
+}
+
+.toggleButton.active .slider {
+  transform: translate(26px, -50%); /* Déplacer le slider */
+}
+
+
+/* Icônes soleil/lune */
+.icon {
+  font-size: 1rem;
+  
+}
 
 
 /* Bouton hamburger */
@@ -55,6 +103,7 @@
   color: var(--text-color); /* Couleur de l'icône */
   cursor: pointer; /* Curseur en forme de main */
   display: none; /* Masqué par défaut */
+  transistion: all 0.3s ease;
 }
 .hamburger:hover {
   transform: scale(1.1); /* Agrandissement léger au survol */
@@ -62,32 +111,43 @@
 
 
 /* Menu principal */
-.menu {
+.center {
   display: flex; /* Aligne les liens horizontalement */
+  justify-content: center; 
+  
 }
 
-/* Liens du menu */
-.menu p {
-  color: var(--text-color); /* Couleur du texte */
-  font-size: 1rem; /* Taille de la police */
-  margin: 0; /* Pas d'espacement externe */
-  padding: 0.5rem 1rem; /* Espacement interne */
-  cursor: pointer; /* Curseur en forme de main */
-  transition: color 0.3s ease, background-color 0.3s ease; /* Transition fluide */
+/* Style des liens du menu */
+.menuItem {
+  color: var(--text-color);
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  text-decoration: none; /* Pas de soulignement */
+  cursor: pointer;
+  
 }
 
-/* Effets au survol des liens */
-.menu p:hover {
+/* Effet au survol des liens */
+.menuItem:hover {
   color: #ffcc00; /* Couleur jaune au survol */
-  background-color: var(--bg-font-hover); /* Fond translucide */
-  border-radius: 5px; /* Coins arrondis */
+  background-color: var(--bg-font-hover);
+  border-bottom: 2px solid #ffcc00; /* Surlignement */
+}
+
+/* Lien actif (page actuelle) */
+.activeLink {
+  color: #ffcc00; /* Couleur spéciale (jaune) */
+  font-weight: bold; /* Texte en gras */
+  border-bottom: 2px solid #ffcc00; /* Surlignement */
 }
 
 /* Responsive : Cacher le menu sur mobile */
 @media (max-width: 768px) {
-  .menu {
+  .center {
     display: none; /* Masqué par défaut */
     flex-direction: column; /* Aligne les liens verticalement */
+    align-items: flex-start; /* Les enfants du menu sont alignés à gauche */
     background: var(--bg-menu-color);/* Fond avec une opacité de 70% */
     backdrop-filter: blur(10px); /* Effet de flou derrière */
     -webkit-backdrop-filter: blur(10px); /* Pour Safari */
@@ -99,75 +159,81 @@
     z-index: 100; /* Au-dessus des autres éléments */
   }
 
+  .menuItem {
+    display: inline-block; /*  Le lien prend uniquement la largeur du texte */
+    width: auto; /*  Empêche le lien de prendre 100% */
+    padding: 8px 16px; 
+    position: relative; /*  Nécessaire pour que ::after fonctionne */
+  }
+
+  /* Survol du lien (barre de surlignement) */
+  .menuItem::after {
+    content: ''; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 0; /* La largeur initiale de la barre */
+    height: 2px; 
+    background-color: #ffcc00; 
+    transition: width 0.3s ease-in-out; 
+  }
+
+  /* Survol : étend la largeur de la barre au survol */
+  .menuItem:hover::after {
+    width: 100%; /*  La largeur de la barre suit le texte */
+  }
+
+  .menuItem:hover {
+    color: #ffcc00; 
+  }
+
   /* Menu visible (après clic sur le bouton hamburger) */
   .menuOpen {
     display: flex; /* Afficher les liens */
-    animation: mymenu 2s ease 0s 1 normal forwards;
+    animation: myAnim 2s ease 0s 1 normal forwards;
   }
 
-  @keyframes mymenu {
+  @keyframes myAnim {
     0% {
-      animation-timing-function: ease-in;
       opacity: 0;
-      transform: translateY(-250px);
-    }
-  
-    38% {
-      animation-timing-function: ease-out;
-      opacity: 1;
-      transform: translateY(0);
-    }
-  
-    55% {
-      animation-timing-function: ease-in;
-      transform: translateY(-65px);
-    }
-  
-    72% {
-      animation-timing-function: ease-out;
-      transform: translateY(0);
-    }
-  
-    81% {
-      animation-timing-function: ease-in;
-      transform: translateY(-28px);
-    }
-  
-    90% {
-      animation-timing-function: ease-out;
-      transform: translateY(0);
-    }
-  
-    95% {
-      animation-timing-function: ease-in;
-      transform: translateY(-8px);
+      transform: translateY(-50px);
     }
   
     100% {
-      animation-timing-function: ease-out;
+      opacity: 1;
       transform: translateY(0);
     }
   }
 
-  /* Liens du menu déroulant */
-  .menu p {
-    padding: 1rem; /* Espacement interne pour les liens */
-    text-align: center; /* Centrer le texte */
-  }
 }
 
 /* Afficher le logo uniquement sur mobile */
 @media (max-width: 768px) {
   .logo {
     display: flex; /* Afficher sur mobile */
+    justify-content: flex-start; /*  Aligner le logo à gauche */
+    align-items: center; /* Centrer verticalement */
+    width: 100%; 
+    padding-left: 16px; /*  Espace à gauche du logo */
     margin-left: 1rem; /* Espacement à gauche */
     color: var(--text-color);
   }
+
+  /* Afficher le logo uniquement sur mobile */
+  .logoText {
+    display: block; /*  Le logo est visible en mobile */
+    margin-left: 10px; 
+  }
 }
+
+
+
 
 /* Afficher le bouton hamburger uniquement sur mobile */
 @media (max-width: 768px) {
   .hamburger {
     display: block; /* Afficher sur mobile */
+    margin-right: 10px; /* Un peu d'espace entre le bouton et le logo */
+  
   }
 }

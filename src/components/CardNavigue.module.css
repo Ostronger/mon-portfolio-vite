@@ -3,7 +3,7 @@
   max-width: 1200px; /* Largeur maximale pour les écrans larges */
   height: auto; /* Ajuste automatiquement à la hauteur du contenu */
   border-radius: 20px; /* Coins plus arrondis pour un design moderne */
-  box-shadow: var(--shadow-navbar-color); /* Ombre subtile pour créer de la profondeur */
+  background:var(--bg-color-body);
   display: flex; /* Flexbox pour une mise en page structurée */
   flex-direction: row; /* Met l'image et le contenu côte à côte */
   align-items: stretch; /* Étend l'image et le contenu à la même hauteur */
@@ -48,6 +48,7 @@
   .titreProduct {
     width: 100%; /* Occupe toute la largeur */
     margin-top: 0px; /* Ajoute un espacement au-dessus */
+    
   }
   
   
@@ -68,14 +69,13 @@
     height: 100%; /* Limite la hauteur de l'image */
     object-fit: cover; /* Ajuste l'image sans déformation */
     border-radius: 10px; /* Coins arrondis pour un design moderne */
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px; /* Ombre subtile pour créer de la profondeur */
   }
 
   /* Titre */
 .titreName {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--Gray-900, #191C1F);
+  color: var(--text-color); /* Couleur du texte */
   line-height: 1.2;
 }
 
@@ -84,9 +84,6 @@
   width: 100%; /* Prend toute la largeur disponible */
   max-width: 100%; /* Empêche tout dépassement */
   padding: 20px; /* Espacement interne autour du contenu */
-  background-color: var(--secondary-bg-color); /* Couleur de fond (utilise la variable CSS pour la personnalisation) */
-  border-radius: 10px; /* Coins arrondis pour un design plus doux */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre pour la profondeur */
   overflow: hidden; /* Empêche le contenu de déborder */
   display: flex; /* Utilisation de flex pour plus de contrôle */
   flex-direction: column; /* Les éléments enfants s'empilent verticalement */
@@ -96,7 +93,7 @@
 /***** Texte principal de la description *****/
 .descriptionProduct {
   font-size: 1rem; /* Taille de la police de base */
-  color: var(--Gray-700, #475156); /* Couleur du texte principale (variable CSS personnalisable) */
+  color: var(--text-color); /* Couleur du texte */
   line-height: 1.6; /* Espacement vertical entre les lignes pour une meilleure lisibilité */
   margin-bottom: 0px; /* Espace en bas du texte */
   text-align: justify; /* Justifie le texte pour une apparence plus propre */
@@ -183,6 +180,28 @@
   .dot.active {
     background-color: var(--Primary-500, #FA8232); /* Couleur active pour le point sélectionné */
   }
+
+  .playPauseButton {
+    width: 40px;
+    height: 40px;
+    background-color: var(--Primary-500, #FA8232);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 16px; /* Ajoute de l'espace entre les points et le bouton */
+  }
+  
+  .playPauseButton:hover {
+    background-color: var(--Primary-700, #C65A20);
+    transform: scale(1.1); /* Zoom au survol */
+  }
+  
 
 
   @media (max-width: 768px) {

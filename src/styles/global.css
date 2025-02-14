@@ -14,7 +14,7 @@ body {
   background: var(--bg-color);/* Couleur d'arrière-plan */
   color: var(--text-color); /* Couleur du texte */
   margin-top: 90px; /* Correspond à la hauteur de la navbar */
-  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); /* Exemple d'arrière-plan */
+  background: var(--bg-color-body);
 }
 
 
@@ -33,6 +33,8 @@ body.light {
     --bg-font-hover: rgba(255, 255, 255, 0.1); 
     --bg-menu-color: rgba(255, 255, 255, 0.7);
     --bg-menu-blur: blur(10px);
+    --bg-color-body:  #f5f5f7;
+    --bg-home: #ffffff;
     
   }
   
@@ -49,6 +51,8 @@ body.light {
     --bg-font-hover: rgba(0, 0, 0, 0.1); 
     --bg-menu-color: rgba(0, 0, 0, 0.7);
     --bg-menu-blur: blur(10px);
+    --bg-color-body:rgb(98, 98, 98);
+    --bg-home: rgb(0, 0, 0);
   }
 
 
@@ -63,6 +67,5 @@ p {
 }
 
 
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+
 

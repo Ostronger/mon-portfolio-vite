@@ -3,6 +3,8 @@ import styles from './CardNavigue.module.css'; // Import des styles CSS Modules
 import Coco from './../assets/Design_sans_titre.png';
 import Second from './../assets/reading-7807231_1280.webp';
 import MoiMeme from './../assets/papillon-dans-nature-vibrante-flutter-ailes-au-milieu-beau-jardin-fleurit-generative-ai_762139-7879.avif';
+import { FaPause, FaPlay } from 'react-icons/fa'; // Icônes de lecture et pause
+
 
 
 interface Product {
@@ -17,18 +19,18 @@ const CardNavigue: React.FC = () => {
     {
       title: "Qui suis je?",
       description: [
-        "👋 Je suis Pierre Paul Jacque, un développeur fullstack en devenir 🚀. Passionné d’informatique et en pleine reconversion professionnelle.",
+        " Je suis Lukamba, un développeur fullstack en devenir. Passionné d’informatique et en pleine reconversion professionnelle.",
         "Chaque projet, chaque ligne de code, est le reflet de ma détermination à maîtriser les technologies du web. Actuellement en BTS SIO option SLAM, je me forme à la création d’applications modernes et performantes.",
         {
           type: 'list',
           items: [
-            "🌐 Création de sites web responsives",
-            "📲 Développement mobile avec React Native",
-            "💻 Maîtrise des bases de données (SQL, NoSQL)"
+            " Création de sites web responsives",
+            " Développement mobile avec React Native",
+            " Maîtrise des bases de données (SQL)"
           ]
         },
         "Mon objectif ? Devenir un développeur fullstack complet, capable de créer des solutions de A à Z, du front-end au back-end.",
-        "📩 Envie de collaborer ? N’hésitez pas à me contacter !"
+        " Envie de collaborer ? N’hésitez pas à me contacter !"
       ],
       imageUrl: Coco,
     },
@@ -47,10 +49,10 @@ const CardNavigue: React.FC = () => {
         {
           type: 'list',
           items: [
-            "✔️ HTML / CSS / JavaScript",
-            "✔️ React / React Native",
-            "✔️ Node.js / Express",
-            "✔️ SQL et NoSQL (MongoDB)"
+            " HTML / CSS / JavaScript",
+            " React / React Native",
+            " Node.js / Express",
+            " SQL ",
           ]
         }
       ],
@@ -61,15 +63,19 @@ const CardNavigue: React.FC = () => {
   // État pour suivre la carte actuelle
   const [currentCard, setCurrentCard] = useState(0);
   const [animate, setAnimate] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true); // État de lecture/pause
+
 
   // Défilement automatique des cartes
   useEffect(() => {
+    if (isPlaying) {
     const interval = setInterval(() => {
       setCurrentCard((prevCard) => (prevCard + 1) % products.length);
-    }, 10000);
+    }, 10000); // Défilement automatique toutes les 5 secondes
 
     return () => clearInterval(interval);
-  }, [products.length]);
+    }
+  }, [isPlaying, products.length]);
 
   // Déclencher l'animation à chaque changement de carte
   useEffect(() => {
@@ -77,6 +83,10 @@ const CardNavigue: React.FC = () => {
     const timeout = setTimeout(() => setAnimate(false), 500); // Retire la classe après l'animation
     return () => clearTimeout(timeout);
   }, [currentCard]);
+
+  // Contrôle du bouton de lecture/pause
+  const togglePlayPause = () => setIsPlaying(!isPlaying); 
+
 
   const handleDotClick = (index: number) => {
     setCurrentCard(index);
@@ -132,8 +142,18 @@ const CardNavigue: React.FC = () => {
             onClick={() => handleDotClick(index)}
           ></span>
         ))}
+
+        {/* Bouton Play / Pause */}
+        <button 
+          className={styles.playPauseButton} 
+          onClick={togglePlayPause}
+        >
+          {isPlaying ? <FaPause /> : <FaPlay />}
+        </button>
+    
       </div>
     </div>
+    
   );
 };
 
