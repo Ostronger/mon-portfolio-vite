@@ -1,86 +1,85 @@
 /* Conteneur principal du footer */
 .footer {
-    
-    color: var(--text-color, #ffffff);
-    padding: 1.5rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  
+  color: var(--text-color, #ffffff);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color-body); 
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Gérer les petits écrans */
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Section gauche */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+/* Section centrale - Liens */
+.center nav {
+  display: flex;
+  justify-content: center;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--text-color, #ffffff);
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #ffcc00;
+}
+
+/* Section droite - Réseaux sociaux */
+.right {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  text-decoration: none;
+  color: var(--text-color, #ffffff);
+  transition: color 0.3s ease;
+}
+
+.socialLink:hover {
+  color: #ffcc00;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Gérer les petits écrans */
-    width: 100%;
-    max-width: 1200px;
-  }
-  
-  /* Section gauche */
-  .left {
-    display: flex;
     flex-direction: column;
-    gap: 5px;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffcc00;
-  }
-  
-  /* Section centrale - Liens */
-  .center nav {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .navList {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navLink {
-    text-decoration: none;
-    color: var(--text-color, #ffffff);
-    transition: color 0.3s ease;
-  }
-  
-  .navLink:hover {
-    color: #ffcc00;
-  }
-  
-  /* Section droite - Réseaux sociaux */
-  .right {
-    display: flex;
+    align-items: center;
     gap: 1rem;
   }
-  
-  .socialLink {
-    text-decoration: none;
-    color: var(--text-color, #ffffff);
-    transition: color 0.3s ease;
+
+  .center nav {
+    flex-direction: column;
+    gap: 0.5rem;
   }
-  
-  .socialLink:hover {
-    color: #ffcc00;
-  }
-  
-  /* Responsive pour petits écrans */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-  
-    .center nav {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-  }
+}

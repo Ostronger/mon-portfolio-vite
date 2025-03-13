@@ -113,8 +113,24 @@
 /* Menu principal */
 .center {
   display: flex; /* Aligne les liens horizontalement */
-  justify-content: center; 
+  justify-content: space-between; /* Espace entre les liens */
+  align-items: center; /* Centre verticalement */
+  width: 100%; /* Prend toute la largeur */
   
+}
+
+.leftMenu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rightMenu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
 }
 
 /* Style des liens du menu */
@@ -132,13 +148,26 @@
 .menuItem:hover {
   color: #ffcc00; /* Couleur jaune au survol */
   background-color: var(--bg-font-hover);
-  border-bottom: 2px solid #ffcc00; /* Surlignement */
+  
 }
 
 /* Lien actif (page actuelle) */
 .activeLink {
   color: #ffcc00; /* Couleur spéciale (jaune) */
   font-weight: bold; /* Texte en gras */
+}
+
+.contactButton {
+  background-color: var(--bg-color-body); /* Jaune vif */
+  color: var(--text-color); /* Texte sombre pour contraster */
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contactButton:hover {
+  background-color: var(--text-color); /* Un jaune un peu plus foncé au survol */
+  color: var(--bg-color-body); /* Texte clair pour contraster */
   border-bottom: 2px solid #ffcc00; /* Surlignement */
 }
 

@@ -1,17 +1,10 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 20px; 
+  gap: 20px;
   text-align: center; /* Centrer le texte */
-  position: relative; 
+  position: relative;
 }
-
-.pageContent {
-  background: var(--bg-home);
-  padding: 2rem; /* Espacement interne */ 
-}
-
-
 
 /* Animation de gradient pour le h1 */
 h1 {
@@ -29,21 +22,17 @@ h1 {
 h2 {
   font-size: 2rem; /* Taille légèrement plus petite que le h1 */
   font-weight: 500;
-  color:rgb(0, 0, 0); /* Texte blanc */
+  color: rgb(0, 0, 0); /* Texte blanc */
   animation: myAnim 2s ease 0s 1 normal forwards; /* Animation continue */
 }
 
 /* Animation keyframes pour l'entrance */
 @keyframes myAnim {
-	0% {
-		transform: scale(0.5);
-	}
+  0% {
+    transform: scale(0.5);
+  }
 
-	100% {
-		transform: scale(1);
-	}
+  100% {
+    transform: scale(1);
+  }
 }
-
-
-
-

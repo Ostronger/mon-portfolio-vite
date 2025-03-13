@@ -50,20 +50,37 @@ const Navbar: React.FC = () =>  {
 
         {/* Menu principal */}
         <div className={`${styles.center} ${isMenuOpen ? styles.menuOpen : ''}`}>
-            {routes
-              .filter(route => route.label !== '404') 
-              .map(({ path, label }) => (
-                <Link 
-                  key={path} 
-                  to={path} 
-                  className={`${styles.menuItem} ${location.pathname === path ? styles.activeLink : ''}`} 
-                  onClick={() => setIsMenuOpen(false)} 
-                >
-                  {label}
-                </Link>
-            ))}
-            
-        </div>
+  {/* MonPortfolio => Lien d'accueil, à gauche */}
+  <div className={styles.leftMenu}>
+    <Link 
+      to="/"
+      className={`${styles.menuItem} ${location.pathname === '/' ? styles.activeLink : ''}`}
+      onClick={() => setIsMenuOpen(false)}
+    >
+      MonPortfolio
+    </Link>
+  </div>
+
+  {/* Le reste des liens à droite */}
+  <div className={styles.rightMenu}>
+    {routes
+      .filter(route => route.label !== '404' && route.path !== '/') // Exclut MonPortfolio du reste
+      .map(({ path, label }) => (
+        <Link 
+          key={path} 
+          to={path} 
+          className={`
+            ${styles.menuItem} 
+            ${location.pathname === path ? styles.activeLink : ''}
+            ${label === 'Contact' ? styles.contactButton : ''}
+            `} 
+          onClick={() => setIsMenuOpen(false)} 
+        >
+          {label}
+        </Link>
+      ))}
+  
+</div>
 
         {/* Bouton pour changer le thème */}
         <div className={styles.right}>
@@ -83,6 +100,7 @@ const Navbar: React.FC = () =>  {
             src={isDarkMode ? LuneWhite : Lune} 
             alt="mode nuit" 
             className={styles.icon} /> 
+            </div>
           </div>
         </div>   
      </nav>

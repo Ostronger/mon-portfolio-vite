@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    text-align: center; /* Centrer le texte */
+    position: relative; 
+  }
+  
+  .pageContent {
+    background: var(--bg-home);
+    padding: 2rem; /* Espacement interne */ 
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
+  .section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  h1, h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+ .sectionAlternate {
+    background: #f9f9f9;
+  }
+  
+  .sectionImage {
+    width: 300px; /* Ajuste selon ton design */
+    height: 300px; /* Garde un format carré */
+    object-fit: cover; /* Assure que l'image s'ajuste sans distorsion */
+    border-radius: 10px; /* Coins arrondis pour un look moderne */
+    margin-bottom: 15px; /* Espacement sous l'image */
+  }
+
+  .contentWrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacement entre l'image et le texte */
+  }
+  
+  .alternate {
+    flex-direction: row-reverse; /* Inverse l'ordre des éléments */
+    
+  }
+  
+  
+  
+  

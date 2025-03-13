@@ -1,7 +1,7 @@
 import React from "react";
 import MultiFeedlyRSS from "../components/MultiFeedlyRSS";
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const VeilleTechnologique: React.FC = () => {
   const feedUrls = [
@@ -11,11 +11,11 @@ const VeilleTechnologique: React.FC = () => {
   ];
 
   return (
-    <div>
-        <Navbar /> 
+    <div className="container">
+      <Navbar />
       <h1>Veille Technologique</h1>
       <MultiFeedlyRSS feedUrls={feedUrls} />
-        <Footer />
+      <Footer />
     </div>
   );
 };

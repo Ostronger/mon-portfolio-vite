@@ -1,0 +1,61 @@
+.projectsContainer {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .carouselControls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .carouselButton {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+  
+  .carouselButton:hover {
+    background-color: #555;
+  }
+  
+  .projectsWrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px;
+    scrollbar-width: none; /* Masquer la scrollbar */
+  }
+  
+  .projectsWrapper::-webkit-scrollbar {
+    display: none; /* Masquer la scrollbar sur Webkit */
+  }
+  
+  .projectCard {
+    min-width: 300px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .projectCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .projectImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .projectContent {
+    padding: 10px;
+  }

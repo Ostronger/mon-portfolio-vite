@@ -9,7 +9,6 @@ const Footer: React.FC = () => {
       <div className={styles.container}>
         {/* Section gauche */}
         <div className={styles.left}>
-          <h3 className={styles.logo}>MonPortfolio</h3>
           <p>Copyright © {new Date().getFullYear()} MonPortfolio. Tous droits réservés.</p>
         </div>
 
