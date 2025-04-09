@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom'; 
 import routes from '../routes'; 
-import Lune from '../assets/icon/dark_mode.svg';
-import Light from '../assets/icon/light_mode.svg';
-import Lightwhite from '../assets/icon/light_mode_2.svg';
-import LuneWhite from '../assets/icon/dark_mode_2.svg';
 import styles from './Navbar.module.css';
 
 const Navbar: React.FC = () =>  {
@@ -80,15 +76,12 @@ const Navbar: React.FC = () =>  {
         </Link>
       ))}
   
-</div>
+
 
         {/* Bouton pour changer le thème */}
-        <div className={styles.right}>
+        
           <div className={styles.toggleContainer}>
-            <img 
-            src={isDarkMode ? Lightwhite : Light} 
-            alt="mode jour" 
-            className={styles.icon} />
+          Thème: 
             <button 
             className={`${styles.toggleButton} ${isDarkMode ? styles.active : ''}`} 
             onClick={toggleTheme} 
@@ -96,10 +89,7 @@ const Navbar: React.FC = () =>  {
             >
               <div className={styles.slider}></div>
             </button>
-            <img 
-            src={isDarkMode ? LuneWhite : Lune} 
-            alt="mode nuit" 
-            className={styles.icon} /> 
+            
             </div>
           </div>
         </div>   

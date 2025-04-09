@@ -13,6 +13,7 @@ const HomePage: React.FC = () => {
         <h2>BIENVENUE SUR MON PORTFOLIO</h2>
         {/* Intégration du composant Card */}
         <CardNavigue />
+        
       {/* Footer */}
       <Footer />
     </div>

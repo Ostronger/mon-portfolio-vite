@@ -3,7 +3,7 @@ import styles from './CardNavigue.module.css'; // Import des styles CSS Modules
 import Coco from './../assets/Design_sans_titre.png';
 import Second from './../assets/reading-7807231_1280.webp';
 import MoiMeme from './../assets/papillon-dans-nature-vibrante-flutter-ailes-au-milieu-beau-jardin-fleurit-generative-ai_762139-7879.avif';
-import { FaPause, FaPlay } from 'react-icons/fa'; // Icônes de lecture et pause
+//import { FaPause, FaPlay } from 'react-icons/fa'; // Icônes de lecture et pause
 
 
 
@@ -63,19 +63,19 @@ const CardNavigue: React.FC = () => {
   // État pour suivre la carte actuelle
   const [currentCard, setCurrentCard] = useState(0);
   const [animate, setAnimate] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(true); // État de lecture/pause
+  //const [isPlaying, setIsPlaying] = useState(true); // État de lecture/pause
 
 
   // Défilement automatique des cartes
-  useEffect(() => {
-    if (isPlaying) {
-    const interval = setInterval(() => {
-      setCurrentCard((prevCard) => (prevCard + 1) % products.length);
-    }, 10000); // Défilement automatique toutes les 5 secondes
+  //useEffect(() => {
+    //if (isPlaying) {
+    //const interval = setInterval(() => {
+      //setCurrentCard((prevCard) => (prevCard + 1) % products.length);
+    //}, 10000); // Défilement automatique toutes les 5 secondes
 
-    return () => clearInterval(interval);
-    }
-  }, [isPlaying, products.length]);
+    //return () => clearInterval(interval);
+    //}
+  //}, [isPlaying, products.length]);
 
   // Déclencher l'animation à chaque changement de carte
   useEffect(() => {
@@ -85,7 +85,15 @@ const CardNavigue: React.FC = () => {
   }, [currentCard]);
 
   // Contrôle du bouton de lecture/pause
-  const togglePlayPause = () => setIsPlaying(!isPlaying); 
+  //const togglePlayPause = () => setIsPlaying(!isPlaying); 
+
+  const handleArrowClick = (direction: 'left' | 'right') => {
+    if (direction === 'left') {
+      setCurrentCard((prev) => (prev - 1 + products.length) % products.length);
+    } else {
+      setCurrentCard((prev) => (prev + 1) % products.length);
+    }
+  };
 
 
   const handleDotClick = (index: number) => {
@@ -94,7 +102,17 @@ const CardNavigue: React.FC = () => {
 
 
   return (
+    <>
+<div className={styles.cardWrapper}>
+    <button 
+    className={`${styles.arrowButton} ${styles.leftArrow}`}
+    onClick={() => handleArrowClick('left')}
+  >
+    ◀
+  </button>
+    
     <div className={styles.cardPrincipal}>
+
       {/* Image et détails du produit */}
       <div className={styles.productDetails}>
         <img
@@ -132,28 +150,38 @@ const CardNavigue: React.FC = () => {
           ))}
         </div>
       </div>
-  
-      {/* Points de navigation */}
-      <div className={styles.dotsNavigation}>
-        {products.map((_, index) => (
-          <span
-            key={index}
-            className={`${styles.dot} ${index === currentCard ? styles.active : ''}`}
-            onClick={() => handleDotClick(index)}
-          ></span>
-        ))}
 
-        {/* Bouton Play / Pause */}
-        <button 
-          className={styles.playPauseButton} 
-          onClick={togglePlayPause}
-        >
-          {isPlaying ? <FaPause /> : <FaPlay />}
-        </button>
-    
-      </div>
     </div>
-    
+    <button 
+    className={`${styles.arrowButton} ${styles.rightArrow}`}
+    onClick={() => handleArrowClick('right')}
+  >
+    ▶
+  </button>
+
+    </div>
+
+   
+  <div className={styles.dotsNavigation}>
+  {products.map((_, index) => (
+    <span
+      key={index}
+      className={`${styles.dot} ${index === currentCard ? styles.active : ''}`}
+      onClick={() => handleDotClick(index)}
+    ></span>
+  ))}
+
+  {/* Bouton Play / Pause */}
+  {/* 
+  <button 
+    className={styles.playPauseButton} 
+    onClick={togglePlayPause}
+  >
+    {isPlaying ? <FaPause /> : <FaPlay />}
+  </button>
+   */}
+</div>
+</>
   );
 };
 

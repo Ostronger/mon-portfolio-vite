@@ -52,6 +52,7 @@
   cursor: pointer;
 }
 
+
 /* Bouton toggle */
 .toggleButton {
   position: relative;
@@ -117,6 +118,7 @@
   align-items: center; /* Centre verticalement */
   width: 100%; /* Prend toute la largeur */
   
+  
 }
 
 .leftMenu {
@@ -131,10 +133,13 @@
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
+ 
 }
 
 /* Style des liens du menu */
 .menuItem {
+  display: inline-flex; /* Ou inline-block si pas besoin de flex */
+  white-space: nowrap; /* Empêche le texte d'aller à la ligne */
   color: var(--text-color);
   font-size: 1rem;
   margin: 0;
@@ -168,7 +173,11 @@
 .contactButton:hover {
   background-color: var(--text-color); /* Un jaune un peu plus foncé au survol */
   color: var(--bg-color-body); /* Texte clair pour contraster */
-  border-bottom: 2px solid #ffcc00; /* Surlignement */
+
+}
+
+.toggleContainer {
+  gap: 10px;
 }
 
 /* Responsive : Cacher le menu sur mobile */
