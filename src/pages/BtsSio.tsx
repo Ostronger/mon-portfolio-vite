@@ -117,8 +117,9 @@ const BtsSio: React.FC = () => {
                 • Maintenance : L’équipe informatique n’assure pas le support matériel  
                 • Sécurité : Les postes ont été livrés avec des dispositifs de sécurité adaptés`,
                 images: [
-                  "https://picsum.photos/400/200?1",
-                  "https://picsum.photos/400/200?2",
+                  "/images/formation_bureautique.jpeg",
+                  "/images/formation_crm.jpeg",
+                  "/images/formation_video.jpeg",
                 ],
                 links: [
                   {
@@ -132,22 +133,92 @@ const BtsSio: React.FC = () => {
                 ],
               },
               {
-                title: "App Mobile Planning",
+                title: "PPE Projet C: Gestion du matériel informatique",
                 description:
-                  "Application React Native permettant la gestion de planning pour les étudiants.",
+                  `Objectif du Projet :
+                  
+                  Dans le cadre de ce PPE, nous avons développé une solution complète de gestion des prêts de matériel informatique destinée à améliorer le suivi et la disponibilité des équipements.
+                  
+                  Cette solution permettait notamment de :
+                  
+                  • Enregistrer et suivre les prêts de matériel  
+                  • Vérifier les dates de retour et générer des alertes en cas de retard  
+                  • Consulter un historique des prêts pour chaque utilisateur ou équipement  
+                  • Gérer le statut du matériel (disponible, en prêt, endommagé, etc.)
+                  
+                  Le projet s’est articulé autour de trois grands axes :
+                  
+                  • Conception de la base de données et développement du back-end  
+                  • Création d’une interface utilisateur intuitive  
+                  • Mise en place de l’infrastructure et déploiement de l’application`,
                 images: ["https://picsum.photos/300/200?2"],
+                links: [
+                  {
+                    label: "Voir le rapport PDF",
+                    url: "https://exemple.com/rapport-forma-si1.pdf",
+                  },
+                  {
+                    label: "Documentation technique",
+                    url: "https://exemple.com/doc-tech",
+                  },
+                ],
               },
               {
-                title: "Système d’Émargement",
+                title: "Projet ppe 1 : Création d’outil d’émargement  Web",
                 description:
-                  "Application web et mobile permettant la gestion des présences via QR code et signature.",
+                  `Objectif du Projet :
+                  
+                  Dans le cadre de ce PPE, nous avons conçu et développé un outil d’émargement en ligne, destiné à simplifier la gestion de la présence des apprenants dans un établissement de formation.
+                  
+                  Cet outil permettait de :
+                  
+                  • Générer des feuilles de présence numériques  
+                  • Authentifier les apprenants via QR code  
+                  • Consigner automatiquement les signatures et les horaires  
+                  • Faciliter le suivi administratif pour les formateurs et les responsables pédagogiques  
+                  
+                  Le projet a été développé en plusieurs étapes :
+                  
+                  • Rédaction du cahier des charges en collaboration avec les utilisateurs  
+                  • Développement de l’interface web avec Symfony en suivant le modèle MVC  
+                  • Réalisation des tests, déploiement sur un serveur Linux, et mise en production`,
                 images: ["https://picsum.photos/300/200?3"],
+                links: [
+                  {
+                    label: "Voir le rapport PDF",
+                    url: "https://exemple.com/rapport-forma-si1.pdf",
+                  },
+                  {
+                    label: "Documentation technique",
+                    url: "https://exemple.com/doc-tech",
+                  },
+                ],
               },
               {
-                title: "Dashboard Admin",
+                title: "Projet ppe 2 : Création d’outil d’émargement mobile",
                 description:
-                  "Tableau de bord destiné aux administrateurs avec gestion des utilisateurs et données.",
+                  `Objectif du Projet :
+                  
+                  Dans le cadre de ce PPE, nous avons conçu et développé une application mobile permettant aux apprenants de valider leur présence directement via leur smartphone.
+                  
+                  Cet outil a été pensé pour offrir une solution moderne et intuitive d’émargement à distance. Il permettait notamment de :
+                  
+                  • Émarger depuis un appareil mobile grâce à une signature numérique  
+                  • Consulter son planning de cours  
+                  • Justifier une absence ou un retard  
+                  • Assurer une synchronisation sécurisée des données avec le serveur  
+                  L’application a été développée avec React Native via Expo, et les données étaient transmises en temps réel à une API développée avec Symfony.`,
                 images: ["https://picsum.photos/300/200?4"],
+                links: [
+                  {
+                    label: "Voir le rapport PDF",
+                    url: "https://exemple.com/rapport-forma-si1.pdf",
+                  },
+                  {
+                    label: "Documentation technique",
+                    url: "https://exemple.com/doc-tech",
+                  },
+                ],
               },
             ].map((project, i) => (
               <div
@@ -170,16 +241,97 @@ const BtsSio: React.FC = () => {
           <div className={styles.cardGrid}>
             {[
               {
-                title: "Stage 1 : Intégrateur Web",
+                title: "Stage 1 : Développeur Web Front-End chez YANN FRANCE DIPITA",
                 description:
-                  "Intégration d’un site vitrine à partir de maquettes Figma au sein d’une équipe de développement.",
+                `Ce stage de 5 semaines m’a permis d’évoluer au sein d’une équipe composée de deux développeurs back-end et moi en tant que front-end. J’ai participé à la création d’un site vitrine connecté à des APIs.
+                
+                🎯 Objectifs :
+                • Développer l’interface utilisateur en React & TypeScript  
+                • Intégrer les maquettes Figma pour une UI fluide  
+                • Connecter le front-end aux APIs pour afficher produits, utilisateurs, paniers  
+                • Implémenter les appels API (GET, POST) pour gérer les actions essentielles du site  
+                
+                🛠️ Déroulement :
+                • Création de composants réutilisables avec React Hooks  
+                • Intégration responsive en respectant le design Figma  
+                • Récupération dynamique des données via Axios  
+                • Gestion des erreurs et des états de chargement  
+                
+                📈 Résultats :
+                • Un site vitrine fonctionnel et dynamique  
+                • Meilleure maîtrise de React, TypeScript et des appels API  
+                • Expérience de travail en équipe et en méthode agile
+                
+                🔄 Fonctionnement de l’API dans le projet :
+                • Affichage des produits (GET)  
+                • Création et gestion d’un compte utilisateur (GET / POST)  
+                • Ajout de produits au panier (POST)  
+                • Consultation de l’historique des commandes (GET)
+                
+                Chaque interaction suit ce flux :
+                → L’utilisateur agit  
+                → Le front-end envoie une requête HTTP  
+                → L’API traite et interagit avec la base  
+                → Une réponse est renvoyée au front-end  
+                → L’interface est mise à jour en conséquence`,
+                  
                 images: ["https://picsum.photos/300/200?5"],
+                links: [
+                  {
+                    label: "Voir le rapport PDF",
+                    url: "https://exemple.com/rapport-forma-si1.pdf",
+                  },
+                  {
+                    label: "Documentation technique",
+                    url: "https://exemple.com/doc-tech",
+                  },
+                ],
               },
               {
                 title: "Stage 2 : Développeur Fullstack",
-                description:
-                  "Développement d’un réseau social avec React (web) et Flutter (mobile), connecté à une API Symfony.",
+                description: `Objectif du Projet :
+
+Créer une application mobile et web dédiée aux bons plans. L’objectif était de permettre aux utilisateurs de partager, consulter et interagir autour de promotions locales, réductions, et bons plans dans leur région.
+
+Le réseau social devait inclure :
+✅ Un système d’inscription et de connexion sécurisé  
+✅ Un fil d’actualité avec les bons plans récents  
+✅ Un système de commentaires et de likes  
+✅ Une version mobile fluide et une version web fonctionnelle  
+
+Contexte :
+
+Mon stage de 5 semaines s’est déroulé au sein d’une petite équipe : deux développeurs back-end et un webdesigner. J’étais chargé du développement fullstack. En raison du désistement du webdesigner, j’ai également pris en charge la conception des maquettes graphiques.
+
+Mes missions :
+
+🎨 Réalisation de maquettes Figma pour les pages de connexion (web et mobile)  
+💻 Intégration en React pour la version web  
+📱 Développement des écrans en Flutter (connexion, informations) pour la version mobile  
+🔗 Connexion à l’API Symfony pour authentification et récupération des données  
+
+Organisation Agile :
+
+🗓️ Réunions journalières avec mon référent pour le suivi opérationnel  
+🗂️ Réunions hebdomadaires pour ajuster le projet, répartir les tâches, définir les priorités  
+
+Résultats :
+
+✔️ Une interface web opérationnelle avec React  
+✔️ Des vues mobiles fonctionnelles sous Flutter  
+✔️ Une autonomie renforcée sur la gestion de projet et la collaboration inter-équipes`,
+                  
                 images: ["https://picsum.photos/300/200?6"],
+                links: [
+                  {
+                    label: "Voir le rapport PDF",
+                    url: "https://exemple.com/rapport-forma-si1.pdf",
+                  },
+                  {
+                    label: "Documentation technique",
+                    url: "https://exemple.com/doc-tech",
+                  },
+                ],
               },
             ].map((stage, i) => (
               <div
