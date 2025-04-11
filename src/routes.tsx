@@ -7,6 +7,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import VeilleTechnologique from './pages/VeilleTechnologique';
 import About from './pages/About';
 import Projects from './pages/Projects';
+import BtsSio from './pages/BtsSio';
 
 export interface Route {
     path: string;
@@ -19,7 +20,7 @@ export interface Route {
   const routes: Route[] = [
     { path: '/', label: 'Mon portfolio', element: <HomePage /> },
     { path: '/about', label: 'À propos', element: <About /> },
-    { path: '/bts-sio', label: 'BTS SIO', element: <PlaceholderPage title="BTS SIO" /> },
+    { path: '/bts-sio', label: 'BTS SIO', element: <BtsSio /> },
     { path: '/projects', label: 'Mes projets', element: <Projects /> },
     { path: '/veille', label: 'Veille Technologique', element: <VeilleTechnologique  /> },
     { path: '/contact', label: 'Contact', element: <PlaceholderPage title="Contact" /> },
