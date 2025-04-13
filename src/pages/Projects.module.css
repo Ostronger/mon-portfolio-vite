@@ -1,27 +1,33 @@
 .projectsContainer {
-    text-align: center;
-    padding: 20px;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  text-align: center; /* Centrer le texte */
+  position: relative;
   }
   
-  .carouselControls {
+  .carouselSection {
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
   
   .carouselButton {
-    background-color: #333;
-    color: white;
+    background-color: var(--bg-menu-color);
+    color: var(--text-color);
     border: none;
     padding: 10px 15px;
     cursor: pointer;
     font-size: 20px;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
   }
   
   .carouselButton:hover {
-    background-color: #555;
+    background-color: var(--text-color);
+    color: var(--bg-color);
   }
   
   .projectsWrapper {
@@ -39,7 +45,12 @@
   
   .projectCard {
     min-width: 300px;
-    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bg-color-body);
+    border: 1px solid var(--text-color);
+    margin-bottom: 20px;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -52,10 +63,69 @@
   
   .projectImage {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
   }
   
   .projectContent {
     padding: 10px;
+    min-height: 120px;
+  }
+
+  @media (max-width: 1024px) {
+    .projectsWrapper {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 16px;
+      padding: 10px 10px;
+    }
+  
+    .projectCard {
+      min-width: 280px;
+    }
+  
+    .projectImage {
+      height: 180px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .projectsWrapper {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 12px;
+      padding: 10px 5px;
+    }
+  
+    .projectCard {
+      min-width: 240px;
+      padding: 12px;
+    }
+  
+    .projectImage {
+      height: 160px;
+    }
+  
+    .carouselButton {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .projectsWrapper {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+  
+    .projectCard {
+      width: 90%;
+      min-width: unset;
+      max-width: 100%;
+    }
+  
+    .projectImage {
+      height: 150px;
+    }
   }

@@ -291,35 +291,35 @@ const BtsSio: React.FC = () => {
                 title: "Stage 2 : Développeur Fullstack",
                 description: `Objectif du Projet :
 
-Créer une application mobile et web dédiée aux bons plans. L’objectif était de permettre aux utilisateurs de partager, consulter et interagir autour de promotions locales, réductions, et bons plans dans leur région.
+                Créer une application mobile et web dédiée aux bons plans. L’objectif était de permettre aux utilisateurs de partager, consulter et interagir autour de promotions locales, réductions, et bons plans dans leur région.
 
-Le réseau social devait inclure :
-✅ Un système d’inscription et de connexion sécurisé  
-✅ Un fil d’actualité avec les bons plans récents  
-✅ Un système de commentaires et de likes  
-✅ Une version mobile fluide et une version web fonctionnelle  
+                Le réseau social devait inclure :
+                ✅ Un système d’inscription et de connexion sécurisé  
+                ✅ Un fil d’actualité avec les bons plans récents  
+                ✅ Un système de commentaires et de likes  
+                ✅ Une version mobile fluide et une version web fonctionnelle  
 
-Contexte :
+                Contexte :
 
-Mon stage de 5 semaines s’est déroulé au sein d’une petite équipe : deux développeurs back-end et un webdesigner. J’étais chargé du développement fullstack. En raison du désistement du webdesigner, j’ai également pris en charge la conception des maquettes graphiques.
+                Mon stage de 5 semaines s’est déroulé au sein d’une petite équipe : deux développeurs back-end et un webdesigner. J’étais chargé du développement fullstack. En raison du désistement du webdesigner, j’ai également pris en charge la conception des maquettes graphiques.
 
-Mes missions :
+                Mes missions :
 
-🎨 Réalisation de maquettes Figma pour les pages de connexion (web et mobile)  
-💻 Intégration en React pour la version web  
-📱 Développement des écrans en Flutter (connexion, informations) pour la version mobile  
-🔗 Connexion à l’API Symfony pour authentification et récupération des données  
+                🎨 Réalisation de maquettes Figma pour les pages de connexion (web et mobile)  
+                💻 Intégration en React pour la version web  
+                📱 Développement des écrans en Flutter (connexion, informations) pour la version mobile  
+                🔗 Connexion à l’API Symfony pour authentification et récupération des données  
 
-Organisation Agile :
+                Organisation Agile :
 
-🗓️ Réunions journalières avec mon référent pour le suivi opérationnel  
-🗂️ Réunions hebdomadaires pour ajuster le projet, répartir les tâches, définir les priorités  
+                🗓️ Réunions journalières avec mon référent pour le suivi opérationnel  
+                🗂️ Réunions hebdomadaires pour ajuster le projet, répartir les tâches, définir les priorités  
 
-Résultats :
+                Résultats :
 
-✔️ Une interface web opérationnelle avec React  
-✔️ Des vues mobiles fonctionnelles sous Flutter  
-✔️ Une autonomie renforcée sur la gestion de projet et la collaboration inter-équipes`,
+                ✔️ Une interface web opérationnelle avec React  
+                ✔️ Des vues mobiles fonctionnelles sous Flutter  
+                ✔️ Une autonomie renforcée sur la gestion de projet et la collaboration inter-équipes`,
                   
                 images: ["https://picsum.photos/300/200?6"],
                 links: [

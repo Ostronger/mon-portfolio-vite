@@ -42,9 +42,8 @@ body.light {
     --bg-font-hover: rgba(255, 255, 255, 0.1); 
     --bg-menu-color: rgba(255, 255, 255, 0.7);
     --bg-menu-blur: blur(10px);
-    --bg-color-body:  #f5f5f7;
     --bg-home: #ffffff;
-    
+    --bg-button-color: rgb(98, 98, 98);   
   }
   
   /* Thème Nuit */
@@ -61,8 +60,8 @@ body.light {
     --bg-font-hover: rgba(0, 0, 0, 0.1); 
     --bg-menu-color: rgba(0, 0, 0, 0.7);
     --bg-menu-blur: blur(10px);
-    --bg-color-body:rgb(98, 98, 98);
     --bg-home: rgb(0, 0, 0);
+    --bg-button-color: #f5f5f7;
   }
 
 

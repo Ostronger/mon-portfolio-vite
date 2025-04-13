@@ -1,0 +1,81 @@
+.container {
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+  }
+  
+  .dropdown {
+    display: block;
+    margin: 0 auto 2rem auto;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: var(---bg-color-body);
+    color: var(--text-color); 
+    border-radius: 6px;
+  }
+  
+  .feedList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .card {
+    background: var(--bg-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    border: 1px solid var(--text-color);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .cardContent {
+    padding: 1rem;
+  }
+  
+  .link {
+    color: var(--Primary-500);
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+
+  .buttonsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .buttonsContainer button {
+    background-color: var(--bg-color-body);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .buttonsContainer button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color-body);
+  }

@@ -114,7 +114,7 @@ const CardNavigue: React.FC = () => {
           className={`${styles.arrowButton} ${styles.leftArrow}`}
           onClick={() => handleArrowClick('left')}
         >
-          ◀
+          ❮
         </button>
   
         <div className={styles.cardPrincipal}>
@@ -193,7 +193,7 @@ const CardNavigue: React.FC = () => {
           className={`${styles.arrowButton} ${styles.rightArrow}`}
           onClick={() => handleArrowClick('right')}
         >
-          ▶
+          ❯
         </button>
       </div>
   

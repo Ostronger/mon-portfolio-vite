@@ -19,9 +19,7 @@ export const allRoutes: Route[] = [
   { path: '/about', label: 'À propos', element: <About /> },
   { path: '/bts-sio', label: 'BTS SIO', element: <BtsSio /> },
   { path: '/projects', label: 'Mes projets', element: <Projects /> },
-  { path: '/projects/portfolio', element: <ProjectDetail slug="portfolio" /> },
-  { path: '/projects/app-mobile', element: <ProjectDetail slug="app-mobile" /> },
-  { path: '/projects/emargement', element: <ProjectDetail slug="emargement" /> },
+  { path: '/projects/:slug', element: <ProjectDetail /> },
   { path: '/veille', label: 'Veille Technologique', element: <VeilleTechnologique /> },
   { path: '/contact', label: 'Contact', element: <PlaceholderPage title="Contact" /> },
   { path: '*', label: '404', element: <NotFoundPage /> }
