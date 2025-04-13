@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import routes from './routes';
+import { allRoutes } from './routes';
 
 const AnimatedRoutes: React.FC = () => {
   const location = useLocation();
@@ -9,7 +9,7 @@ const AnimatedRoutes: React.FC = () => {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        {routes.map(({ path, element }) => (
+        {allRoutes.map(({ path, element }) => (
           <Route key={path} path={path} element={element} />
         ))}
       </Routes>

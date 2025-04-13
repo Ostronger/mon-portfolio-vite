@@ -163,11 +163,76 @@
 }
 
 .descriptionList li::before {
-  content: '✔️ '; /* Icône de validation avant chaque élément de la liste */
+  content: '•'; /* Icône de validation avant chaque élément de la liste */
   color: var(--Primary-500, #FA8232); /* Couleur dynamique du symbole (variable CSS) */
   font-weight: bold; /* Icône en gras */
   margin-right: 8px; /* Espace entre l'icône et le texte */
   font-size: 1.2rem; /* Taille légèrement supérieure pour le rendre visible */
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.linksGroup {
+  margin-top: 1rem;
+}
+
+.subtitle {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.linkButton {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 6px; 
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.linkButton:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color-body);
+}
+
+.badgeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 2px solid var(--text-color); /* S'adapte à la couleur du texte selon le thème */
+  color: var(--text-color);
+  border-radius: 20px;
+  background-color: transparent;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.badge:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color-body);
+  cursor: default;
 }
 
 /***** Animation douce sur la description *****/

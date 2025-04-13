@@ -1,91 +1,99 @@
 import React, { useState, useEffect } from 'react';
-import styles from './CardNavigue.module.css'; // Import des styles CSS Modules
+import styles from './CardNavigue.module.css';
 import Coco from './../assets/Design_sans_titre.png';
 import Second from './../assets/reading-7807231_1280.webp';
 import MoiMeme from './../assets/papillon-dans-nature-vibrante-flutter-ailes-au-milieu-beau-jardin-fleurit-generative-ai_762139-7879.avif';
-//import { FaPause, FaPlay } from 'react-icons/fa'; // Icônes de lecture et pause
-
-
 
 interface Product {
   title: string;
   subtitle?: string;
-  description: (string | {type: 'list', items: string[] })[]
+  description: (
+    string |
+    { type: 'list'; items: string[] } |
+    { type: 'linksGroup'; subtitle: string; links: { label: string; url: string }[] } |
+    { type: 'badges'; items: string[] }
+  )[];
   imageUrl: string;
 }
+
+const skills: string[] = [
+  "HTML", 
+  "CSS", 
+  "JavaScript", 
+  "React", 
+  "React Native", 
+  "TypeScript", 
+  "Node.js",  
+  "SQL", 
+  "MongoDB", 
+  "Git", 
+  "Figma", 
+  "Symfony", 
+  "PHP", 
+  "Flutter",
+  "Python"
+];
 
 const CardNavigue: React.FC = () => {
   const products: Product[] = [
     {
       title: "Qui suis je?",
       description: [
-        " Je suis Lukamba, un développeur fullstack en devenir. Passionné d’informatique et en pleine reconversion professionnelle.",
-        "Chaque projet, chaque ligne de code, est le reflet de ma détermination à maîtriser les technologies du web. Actuellement en BTS SIO option SLAM, je me forme à la création d’applications modernes et performantes.",
-        {
-          type: 'list',
-          items: [
-            " Création de sites web responsives",
-            " Développement mobile avec React Native",
-            " Maîtrise des bases de données (SQL)"
-          ]
-        },
-        "Mon objectif ? Devenir un développeur fullstack complet, capable de créer des solutions de A à Z, du front-end au back-end.",
-        " Envie de collaborer ? N’hésitez pas à me contacter !"
+        "Je suis Lukamba, passionné d’informatique et engagé dans une réorientation professionnelle vers les métiers du développement.",
+        "Actuellement en formation BTS SIO option SLAM, j’apprends à concevoir des applications modernes, efficaces et adaptées aux besoins des utilisateurs.",
+        "Mon parcours est motivé par une volonté claire : acquérir des compétences solides en développement web et mobile et progresser continuellement dans ce domaine en constante évolution.",
+        "Ce portfolio est le reflet de mon apprentissage, de mes projets et de ma motivation. Envie d’échanger ? N’hésitez pas à me contacter."
       ],
       imageUrl: Coco,
-    },
-    {
-      title: "Mes Projets",
-      description: [
-        "Découvrez mes derniers projets de développement web et mobile.",
-        "Chaque projet est un pas de plus vers la maîtrise des technologies web."
-      ],
-      imageUrl: Second,
     },
     {
       title: "Mes Compétences",
       description: [
         "Voici les compétences techniques que j'ai acquises au fil de ma formation et de mes projets.",
         {
-          type: 'list',
-          items: [
-            " HTML / CSS / JavaScript",
-            " React / React Native",
-            " Node.js / Express",
-            " SQL ",
-          ]
+          type: 'badges',
+          items: skills
         }
       ],
       imageUrl: MoiMeme,
     },
+    {
+      title: "Mes Certifications et Formations Complémentaires",
+      description: [
+        "Découvrez les certifications et Formations Complémentaires que j’ai obtenues au cours de ma formation et de mon apprentissage personnel.",
+        "Elles témoignent de mon engagement à renforcer mes compétences en développement web, mobile et technologies numériques.",
+        {
+          type: 'linksGroup',
+          subtitle: "Formations OpenClassrooms",
+          links: [
+            { label: "HTML / CSS", url: "https://drive.google.com/file/d/1-GBBCb39QoNTkxZIQz7AzzVb5wPqdZMg/view?usp=sharing" },
+            { label: "Devenez développeur agile", url: "https://drive.google.com/file/d/1omAosnVo_mmFPSZMhmpy5E-6vaMpKnRE/view?usp=sharing" },
+            { label: "Mettre en place un environnement front-end", url: "https://drive.google.com/file/d/1Y3ZREtYyR59sLfRNfCe6a6i7Q9EySNjB/view?usp=sharing" },
+            { label: "Programmer avec JavaScript", url: "https://drive.google.com/file/d/1FNveeOdiO0yXF0acR9FFKh03DTnCURfL/view?usp=sharing" },
+            { label: "Découvrez l'univers de la cybersécurité", url: "Découvrez l'univers de la cybersécurité" },
+            { label: "Apprenez les bases du langage Python", url: "https://drive.google.com/file/d/1tF9hzMhAbBUB2HJ_pl8tYoKyiutS7X7D/view?usp=sharing" }
+          ]
+        },
+        {
+          type: 'linksGroup',
+          subtitle: "Formations Mimo",
+          links: [
+            { label: "JavaScript – Mimo", url: "https://getmimo.com/" }
+          ]
+        }
+      ],
+      imageUrl: Second,
+    },
   ];
 
-  // État pour suivre la carte actuelle
   const [currentCard, setCurrentCard] = useState(0);
   const [animate, setAnimate] = useState(false);
-  //const [isPlaying, setIsPlaying] = useState(true); // État de lecture/pause
 
-
-  // Défilement automatique des cartes
-  //useEffect(() => {
-    //if (isPlaying) {
-    //const interval = setInterval(() => {
-      //setCurrentCard((prevCard) => (prevCard + 1) % products.length);
-    //}, 10000); // Défilement automatique toutes les 5 secondes
-
-    //return () => clearInterval(interval);
-    //}
-  //}, [isPlaying, products.length]);
-
-  // Déclencher l'animation à chaque changement de carte
   useEffect(() => {
-    setAnimate(true); // Ajoute la classe animée
-    const timeout = setTimeout(() => setAnimate(false), 500); // Retire la classe après l'animation
+    setAnimate(true);
+    const timeout = setTimeout(() => setAnimate(false), 500);
     return () => clearTimeout(timeout);
   }, [currentCard]);
-
-  // Contrôle du bouton de lecture/pause
-  //const togglePlayPause = () => setIsPlaying(!isPlaying); 
 
   const handleArrowClick = (direction: 'left' | 'right') => {
     if (direction === 'left') {
@@ -95,93 +103,110 @@ const CardNavigue: React.FC = () => {
     }
   };
 
-
   const handleDotClick = (index: number) => {
     setCurrentCard(index);
   };
 
-
   return (
     <>
-<div className={styles.cardWrapper}>
-    <button 
-    className={`${styles.arrowButton} ${styles.leftArrow}`}
-    onClick={() => handleArrowClick('left')}
-  >
-    ◀
-  </button>
-    
-    <div className={styles.cardPrincipal}>
-
-      {/* Image et détails du produit */}
-      <div className={styles.productDetails}>
-        <img
-          src={products[currentCard].imageUrl}
-          alt={products[currentCard].title}
-          className={`${styles.productImage} ${animate ? styles.animated : ''}`}
-        />
+      <div className={styles.cardWrapper}>
+        <button 
+          className={`${styles.arrowButton} ${styles.leftArrow}`}
+          onClick={() => handleArrowClick('left')}
+        >
+          ◀
+        </button>
+  
+        <div className={styles.cardPrincipal}>
+          <div className={styles.productDetails}>
+            <img
+              src={products[currentCard].imageUrl}
+              alt={products[currentCard].title}
+              className={`${styles.productImage} ${animate ? styles.animated : ''}`}
+            />
+          </div>
+  
+          <div className={styles.contentWidget}>
+            <div className={styles.titreProduct}>
+              <span className={styles.titreName}>{products[currentCard].title}</span>
+            </div>
+  
+            {products[currentCard].subtitle && (
+              <div className={styles.subtitleBlock}>
+                <span className={styles.titreContent1}>{products[currentCard].subtitle}</span>
+              </div>
+            )}
+  
+            <div className={styles.description}>
+              {products[currentCard].description.map((desc, index) => {
+                if (typeof desc === 'string') {
+                  return (
+                    <p key={index} className={styles.descriptionProduct}>
+                      {desc}
+                    </p>
+                  );
+                } else if (desc.type === 'list') {
+                  return (
+                    <ul key={index} className={styles.descriptionList}>
+                      {desc.items.map((item, itemIndex) => (
+                        <li key={itemIndex}>{item}</li>
+                      ))}
+                    </ul>
+                  );
+                } else if (desc.type === 'linksGroup') {
+                  return (
+                    <div key={index} className={styles.linksGroup}>
+                      <h4 className={styles.subtitle}>{desc.subtitle}</h4>
+                      <div className={styles.linkGroup}>
+                        {desc.links.map((link, linkIndex) => (
+                          <a
+                            key={linkIndex}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.linkButton}
+                          >
+                            {link.label}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                } else if (desc.type === 'badges') {
+                  return (
+                    <div key={index} className={styles.badgeContainer}>
+                      {desc.items.map((badge, badgeIndex) => (
+                        <span key={badgeIndex} className={styles.badge}>
+                          {badge}
+                        </span>
+                      ))}
+                    </div>
+                  );
+                }
+                return null;
+              })}
+            </div>
+          </div>
+        </div>
+  
+        <button 
+          className={`${styles.arrowButton} ${styles.rightArrow}`}
+          onClick={() => handleArrowClick('right')}
+        >
+          ▶
+        </button>
       </div>
   
-      {/* Widget principal */}
-      <div className={styles.contentWidget}>
-        {/* En-tête de la carte */}
-        <div className={styles.caption}>
-          <span className={styles.divider}></span>
-          <span className={styles.titreContent1}>{products[currentCard].subtitle}</span>
-        </div>
-  
-        {/* Titre du produit */}
-        <div className={styles.titreProduct}>
-          <span className={styles.titreName}>{products[currentCard].title}</span>
-        </div>
-  
-        {/* Description */}
-        <div className={styles.description}>
-          {products[currentCard].description.map((desc, index) => (
-            typeof desc === 'string' ? (
-              <p key={index} className={styles.descriptionProduct}>{desc}</p>
-            ) : desc.type === 'list' ? (
-              <ul key={index} className={styles.descriptionList}>
-                {desc.items.map((item, itemIndex) => (
-                  <li key={itemIndex}>{item}</li>
-                ))}
-              </ul>
-            ) : null
-          ))}
-        </div>
+      <div className={styles.dotsNavigation}>
+        {products.map((_, index) => (
+          <span
+            key={index}
+            className={`${styles.dot} ${index === currentCard ? styles.active : ''}`}
+            onClick={() => handleDotClick(index)}
+          ></span>
+        ))}
       </div>
-
-    </div>
-    <button 
-    className={`${styles.arrowButton} ${styles.rightArrow}`}
-    onClick={() => handleArrowClick('right')}
-  >
-    ▶
-  </button>
-
-    </div>
-
-   
-  <div className={styles.dotsNavigation}>
-  {products.map((_, index) => (
-    <span
-      key={index}
-      className={`${styles.dot} ${index === currentCard ? styles.active : ''}`}
-      onClick={() => handleDotClick(index)}
-    ></span>
-  ))}
-
-  {/* Bouton Play / Pause */}
-  {/* 
-  <button 
-    className={styles.playPauseButton} 
-    onClick={togglePlayPause}
-  >
-    {isPlaying ? <FaPause /> : <FaPlay />}
-  </button>
-   */}
-</div>
-</>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom'; 
-import routes from '../routes'; 
+import { navRoutes } from '../routes'; 
 import styles from './Navbar.module.css';
 
 const Navbar: React.FC = () =>  {
@@ -59,7 +59,7 @@ const Navbar: React.FC = () =>  {
 
   {/* Le reste des liens à droite */}
   <div className={styles.rightMenu}>
-    {routes
+    {navRoutes
       .filter(route => route.label !== '404' && route.path !== '/') // Exclut MonPortfolio du reste
       .map(({ path, label }) => (
         <Link 
