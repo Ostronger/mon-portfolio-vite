@@ -1,12 +1,12 @@
 // routes.tsx
 import HomePage from './pages/HomePage';
-import PlaceholderPage from './pages/PlaceholderPage';
 import NotFoundPage from './pages/NotFoundPage';
 import VeilleTechnologique from './pages/VeilleTechnologique';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import BtsSio from './pages/BtsSio';
 import ProjectDetail from './pages/ProjectDetail';
+import Contact from './pages/Contact';
 
 export interface Route {
   path: string;
@@ -21,7 +21,7 @@ export const allRoutes: Route[] = [
   { path: '/projects', label: 'Mes projets', element: <Projects /> },
   { path: '/projects/:slug', element: <ProjectDetail /> },
   { path: '/veille', label: 'Veille Technologique', element: <VeilleTechnologique /> },
-  { path: '/contact', label: 'Contact', element: <PlaceholderPage title="Contact" /> },
+  { path: '/contact', label: 'Contact', element: <Contact/> },
   { path: '*', label: '404', element: <NotFoundPage /> }
 ];
 
