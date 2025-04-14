@@ -22,7 +22,6 @@ h1 {
 h2 {
   font-size: 2rem; /* Taille légèrement plus petite que le h1 */
   font-weight: 500;
-  color: rgb(0, 0, 0); /* Texte blanc */
   animation: myAnim 2s ease 0s 1 normal forwards; /* Animation continue */
 }
 

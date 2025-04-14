@@ -168,6 +168,7 @@
   border-radius: 20px;
   padding: 0.5rem 1rem;
   transition: background-color 0.3s ease;
+  border: 1px solid var(--text-color);
 }
 
 .contactButton:hover {

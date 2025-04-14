@@ -69,6 +69,11 @@ const Projects: React.FC = () => {
     <div className={styles.projectsContainer}>
       <Navbar />
       <h1>Mes Projets</h1>
+      <p className={styles.intro}>
+      Cette section présente une sélection de projets que j’ai réalisés au cours de ma reconversion et de mon apprentissage en développement. 
+      Ces projets sont variés, allant de la création d’interfaces web à l’intégration d’API ou encore à la mise en place d’architectures back-end. 
+      Chacun d’eux reflète mes compétences techniques, ma progression, et ma passion pour l’informatique.
+      </p>
   
       {/* ✅ Regroupe les flèches et le carrousel dans un seul bloc */}
       <div className={styles.carouselSection}>

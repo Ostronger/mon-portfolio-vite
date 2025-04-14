@@ -73,6 +73,16 @@
     min-height: 120px;
   }
 
+  .intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    color: #444;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
   @media (max-width: 1024px) {
     .projectsWrapper {
       flex-wrap: nowrap;

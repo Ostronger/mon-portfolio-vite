@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './CardNavigue.module.css';
 import Coco from './../assets/Design_sans_titre.png';
-import Second from './../assets/reading-7807231_1280.webp';
-import MoiMeme from './../assets/papillon-dans-nature-vibrante-flutter-ailes-au-milieu-beau-jardin-fleurit-generative-ai_762139-7879.avif';
 
 interface Product {
   title: string;
@@ -55,7 +53,7 @@ const CardNavigue: React.FC = () => {
           items: skills
         }
       ],
-      imageUrl: MoiMeme,
+      imageUrl: "/images/compétences.jpg",
     },
     {
       title: "Mes Certifications et Formations Complémentaires",
@@ -82,7 +80,7 @@ const CardNavigue: React.FC = () => {
           ]
         }
       ],
-      imageUrl: Second,
+      imageUrl: "/images/livre_ouvert.jpg",
     },
   ];
 

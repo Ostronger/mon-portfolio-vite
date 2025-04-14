@@ -71,6 +71,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1rem; /* Espacement en bas */
 }
 
+h1 {
+  color: rgb(98, 98, 98); /* Couleur du texte */
+  text-align: center; /* Centrer les titres */
+}
+
 p {
   margin: 0 0 1rem; /* Espacement entre les paragraphes */
 }
