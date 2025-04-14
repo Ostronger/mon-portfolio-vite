@@ -17,8 +17,8 @@ const Footer: React.FC = () => {
           <nav>
             <ul className={styles.navList}>
               <li><a href="/" className={styles.navLink}>Accueil</a></li>
-              <li><a href="/a-propos" className={styles.navLink}>À propos</a></li>
-              <li><a href="/projets" className={styles.navLink}>Projets</a></li>
+              <li><a href="/about" className={styles.navLink}>À propos</a></li>
+              <li><a href="/projects" className={styles.navLink}>Projets</a></li>
               <li><a href="/contact" className={styles.navLink}>Contact</a></li>
             </ul>
           </nav>
