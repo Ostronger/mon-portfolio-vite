@@ -14,8 +14,8 @@ export interface ProjectDetailData {
         slug: "portfolio",
         title: "Portfolio",
         images: [
-          { url: "https://picsum.photos/600/300?1", legende: "Page d'accueil du portfolio" },
-          { url: "https://loremflickr.com/1280/720", legende: "Section projets" }
+          { url: "/images/projectdetail_accueil.png", legende: "Page d'accueil du portfolio thème clair" },
+          { url: "/images/projectdetail_accueil2.png", legende: "Page d'accueil thème sombre" }
         ],
         description: [
           {
@@ -30,20 +30,19 @@ export interface ProjectDetailData {
         ],
         technologies: ["React", "TypeScript", "CSS Modules"],
         links: [
-          { label: "Voir le site", url: "https://monportfolio.com" },
-          { label: "Code source", url: "https://github.com/monrepo/portfolio" }
+          { label: "Code source", url: "https://github.com/Ostronger/mon-portfolio-vite.git" }
         ]
       },
       {
         slug: "app-mobile",
         title: "Application Mobile",
         description: [
-          { titre: "Objectifs de l'application", contenu: "Une application mobile de gestion de tâches réalisée avec React Native." },
-          "Cette application permet d’ajouter, modifier et supprimer des tâches quotidiennes à l’aide d’une interface intuitive.",
+          { titre: "Objectifs de l'application", contenu: "Une application mobile pour la signature des aprrenants réalisée avec React Native." },
+          "Cette application permet de signer, consulter son planning quotidiennement à l’aide d’une interface intuitive.",
           {
             sousTitre: "Fonctionnalités principales",
             contenu: 
-            "• Gestion des tâches\n• Notifications locales\n• Interface responsive compatible Android/iOS"
+            "• Emargement\n• Planning\n• Interface responsive compatible Android/iOS\n• Notifications\n• Justifier une absence"
           }
         ],
         images: [
@@ -60,14 +59,14 @@ export interface ProjectDetailData {
           "Le système permet aux formateurs et administrateurs de suivre les émargements en temps réel, avec un accès aux historiques par session.",
           {
             sousTitre: "Fonctionnalités",
-            contenu: "• Émargement numérique avec QR code\n• Interface administrateur pour le suivi\n• Export des rapports d’émargement"
+            contenu: "• Émargement numérique \n• Interface administrateur pour le suivi\n• Export des rapports d’émargement\n• Création de sessions d’émargement\n• Création de comptes utilisateurs"
           }
         ],
         images: [
           { url: "https://picsum.photos/600/300?3", legende: "Vue de l’interface d’émargement" },
           { url: "https://loremflickr.com/1280/720", legende: "Suivi des présences par session" }
         ],
-        technologies: ["Symfony", "React", "MySQL"]
+        technologies: ["Symfony", "PHP", "MySQL"]
       }
   ];
   

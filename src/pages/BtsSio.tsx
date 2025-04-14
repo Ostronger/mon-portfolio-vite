@@ -87,7 +87,7 @@ const BtsSio: React.FC = () => {
           </p>
 
           {/* Mes projets */}
-          <h3>Mes projets</h3>
+          <h3>Mes projets en BTS SIO</h3>
           <div className={styles.cardGrid}>
             {[
               {
@@ -123,12 +123,8 @@ const BtsSio: React.FC = () => {
                 ],
                 links: [
                   {
-                    label: "Voir le rapport PDF",
-                    url: "https://exemple.com/rapport-forma-si1.pdf",
-                  },
-                  {
                     label: "Documentation technique",
-                    url: "https://exemple.com/doc-tech",
+                    url: "https://drive.google.com/file/d/1LfmokhXqy1i1aMJqKh2J8egA8YTBFc2b/view?usp=sharing",
                   },
                 ],
               },
@@ -151,29 +147,33 @@ const BtsSio: React.FC = () => {
                   • Conception de la base de données et développement du back-end  
                   • Création d’une interface utilisateur intuitive  
                   • Mise en place de l’infrastructure et déploiement de l’application`,
-                images: ["https://picsum.photos/300/200?2"],
+                images: [
+                  "/images/btssio_ppeC.jpeg",
+                  "/images/btssio_ppeCaccueil.png",
+                ],
+                
                 links: [
                   {
-                    label: "Voir le rapport PDF",
-                    url: "https://exemple.com/rapport-forma-si1.pdf",
+                    label: "Maquette Figma",
+                    url: "https://www.figma.com/design/84yIbDiupgV98vLLouK2rn/Untitled?node-id=0-1&m=dev&t=39mxCbZTr7ojo6zB-1",
                   },
                   {
-                    label: "Documentation technique",
-                    url: "https://exemple.com/doc-tech",
+                    label: "Rapport de projet",
+                    url: "https://docs.google.com/document/d/1drG3C55X7NyJl5cRP3PmMSDuf105UAcdmez1J9Jl1XM/edit?usp=sharing",
                   },
                 ],
               },
               {
-                title: "Projet ppe 1 : Création d’outil d’émargement  Web",
+                title: "Projet ppe 1 : Création d'un outil d’émargement Web",
                 description:
                   `Objectif du Projet :
                   
                   Dans le cadre de ce PPE, nous avons conçu et développé un outil d’émargement en ligne, destiné à simplifier la gestion de la présence des apprenants dans un établissement de formation.
                   
-                  Cet outil permettait de :
+                  Cet outil permet de :
                   
                   • Générer des feuilles de présence numériques  
-                  • Authentifier les apprenants via QR code  
+                  • Authentifier les apprenants
                   • Consigner automatiquement les signatures et les horaires  
                   • Faciliter le suivi administratif pour les formateurs et les responsables pédagogiques  
                   
@@ -182,15 +182,23 @@ const BtsSio: React.FC = () => {
                   • Rédaction du cahier des charges en collaboration avec les utilisateurs  
                   • Développement de l’interface web avec Symfony en suivant le modèle MVC  
                   • Réalisation des tests, déploiement sur un serveur Linux, et mise en production`,
-                images: ["https://picsum.photos/300/200?3"],
+                images: [
+                  "/images/btssio_ppemargeweb3.png",
+                  "/images/btssio_ppeemargeweb2.png",
+                  "/images/btssio_ppeemargeweb1.png",
+                ],
                 links: [
                   {
-                    label: "Voir le rapport PDF",
-                    url: "https://exemple.com/rapport-forma-si1.pdf",
+                    label: "Figma",
+                    url: "https://www.figma.com/design/rljuchhQ7rZN6gcvg2awzh/site-feuille-d'%C3%A9margement?node-id=0-1&m=dev&t=vPFFMNLUMfXzkFHW-1",
                   },
                   {
-                    label: "Documentation technique",
-                    url: "https://exemple.com/doc-tech",
+                    label: "GitHub",
+                    url: "https://github.com/Ostronger/emargement-symfony",
+                  },
+                  {
+                    label: "Documentation",
+                    url: "https://atom-porpoise-e92.notion.site/Projets-d-margement-195cf6ffbb2180c38dedc08e83b4a523",
                   },
                 ],
               },
@@ -208,15 +216,23 @@ const BtsSio: React.FC = () => {
                   • Justifier une absence ou un retard  
                   • Assurer une synchronisation sécurisée des données avec le serveur  
                   L’application a été développée avec React Native via Expo, et les données étaient transmises en temps réel à une API développée avec Symfony.`,
-                images: ["https://picsum.photos/300/200?4"],
+                images: [
+                  "images/btssio_ppe2mobile3.png",
+                  "images/btssio_ppe2mobile2.png",
+                  "images/btssio_ppe2mobile1.png",
+                ],
                 links: [
                   {
-                    label: "Voir le rapport PDF",
-                    url: "https://exemple.com/rapport-forma-si1.pdf",
+                    label: "Github",
+                    url: "https://github.com/Ostronger/Emargement-reactNative",
                   },
                   {
-                    label: "Documentation technique",
-                    url: "https://exemple.com/doc-tech",
+                    label: "Figma",
+                    url: "https://www.figma.com/design/rljuchhQ7rZN6gcvg2awzh/site-feuille-d'%C3%A9margement?node-id=0-1&m=dev&t=vPFFMNLUMfXzkFHW-1",
+                  },
+                  {
+                    label: "Documentation",
+                    url: "https://atom-porpoise-e92.notion.site/Projets-d-margement-195cf6ffbb2180c38dedc08e83b4a523",
                   },
                 ],
               },
@@ -245,28 +261,27 @@ const BtsSio: React.FC = () => {
                 description:
                 `Ce stage de 5 semaines m’a permis d’évoluer au sein d’une équipe composée de deux développeurs back-end et moi en tant que front-end. J’ai participé à la création d’un site vitrine connecté à des APIs.
                 
-                🎯 Objectifs :
+                Objectifs :
                 • Développer l’interface utilisateur en React & TypeScript  
                 • Intégrer les maquettes Figma pour une UI fluide  
                 • Connecter le front-end aux APIs pour afficher produits, utilisateurs, paniers  
                 • Implémenter les appels API (GET, POST) pour gérer les actions essentielles du site  
                 
-                🛠️ Déroulement :
+                Déroulement :
                 • Création de composants réutilisables avec React Hooks  
                 • Intégration responsive en respectant le design Figma  
                 • Récupération dynamique des données via Axios  
                 • Gestion des erreurs et des états de chargement  
                 
-                📈 Résultats :
-                • Un site vitrine fonctionnel et dynamique  
+                Résultats :
+                • Création de plusieurs composants réutilisables (Header, Footer, etc.) 
                 • Meilleure maîtrise de React, TypeScript et des appels API  
                 • Expérience de travail en équipe et en méthode agile
                 
-                🔄 Fonctionnement de l’API dans le projet :
+                Fonctionnement de l’API dans le projet :
                 • Affichage des produits (GET)  
                 • Création et gestion d’un compte utilisateur (GET / POST)  
                 • Ajout de produits au panier (POST)  
-                • Consultation de l’historique des commandes (GET)
                 
                 Chaque interaction suit ce flux :
                 → L’utilisateur agit  
@@ -275,15 +290,17 @@ const BtsSio: React.FC = () => {
                 → Une réponse est renvoyée au front-end  
                 → L’interface est mise à jour en conséquence`,
                   
-                images: ["https://picsum.photos/300/200?5"],
+                images: [
+                  "images/stage1_1.jpeg",
+                  "images/stage1_2.jpeg",
+                  "images/stage1_3.jpeg",
+                  "images/stage1_4.jpeg",
+                  "images/stage1_5.jpeg",
+                ],
                 links: [
                   {
                     label: "Voir le rapport PDF",
                     url: "https://exemple.com/rapport-forma-si1.pdf",
-                  },
-                  {
-                    label: "Documentation technique",
-                    url: "https://exemple.com/doc-tech",
                   },
                 ],
               },
@@ -294,10 +311,10 @@ const BtsSio: React.FC = () => {
                 Créer une application mobile et web dédiée aux bons plans. L’objectif était de permettre aux utilisateurs de partager, consulter et interagir autour de promotions locales, réductions, et bons plans dans leur région.
 
                 Le réseau social devait inclure :
-                ✅ Un système d’inscription et de connexion sécurisé  
-                ✅ Un fil d’actualité avec les bons plans récents  
-                ✅ Un système de commentaires et de likes  
-                ✅ Une version mobile fluide et une version web fonctionnelle  
+                • Un système d’inscription et de connexion sécurisé  
+                • Un fil d’actualité avec les bons plans récents  
+                • Un système de commentaires et de likes  
+                • Une version mobile fluide et une version web fonctionnelle  
 
                 Contexte :
 
@@ -305,31 +322,30 @@ const BtsSio: React.FC = () => {
 
                 Mes missions :
 
-                🎨 Réalisation de maquettes Figma pour les pages de connexion (web et mobile)  
-                💻 Intégration en React pour la version web  
-                📱 Développement des écrans en Flutter (connexion, informations) pour la version mobile  
-                🔗 Connexion à l’API Symfony pour authentification et récupération des données  
+                • Réalisation de maquettes Figma pour les pages de connexion (web et mobile)  
+                • Intégration en React pour la version web  
+                • Développement des écrans en Flutter (connexion, informations) pour la version mobile  
+                • Connexion à l’API Symfony pour authentification et récupération des données  
 
                 Organisation Agile :
 
-                🗓️ Réunions journalières avec mon référent pour le suivi opérationnel  
-                🗂️ Réunions hebdomadaires pour ajuster le projet, répartir les tâches, définir les priorités  
+                • Réunions journalières avec mon référent pour le suivi opérationnel  
+                • Réunions hebdomadaires pour ajuster le projet, répartir les tâches, définir les priorités  
 
                 Résultats :
 
-                ✔️ Une interface web opérationnelle avec React  
-                ✔️ Des vues mobiles fonctionnelles sous Flutter  
-                ✔️ Une autonomie renforcée sur la gestion de projet et la collaboration inter-équipes`,
+                • Une interface web opérationnelle avec React  
+                • Des vues mobiles fonctionnelles sous Flutter  
+                • Une autonomie renforcée sur la gestion de projet et la collaboration inter-équipes`,
                   
-                images: ["https://picsum.photos/300/200?6"],
+                images: [
+                  "images/stage2_1.jpeg",
+                  "images/stage2_2.jpeg",
+                ],
                 links: [
                   {
                     label: "Voir le rapport PDF",
                     url: "https://exemple.com/rapport-forma-si1.pdf",
-                  },
-                  {
-                    label: "Documentation technique",
-                    url: "https://exemple.com/doc-tech",
                   },
                 ],
               },

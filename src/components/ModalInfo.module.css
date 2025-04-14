@@ -54,11 +54,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center; 
   }
   
   .linkButton {
-    background: var(--Primary-500, #FA8232);
-    color: white;
+    background: var(--bg-color-body);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     text-decoration: none;
@@ -66,7 +68,8 @@
   }
   
   .linkButton:hover {
-    background: var(--Primary-700, #C65A20);
+    background: var(--text-color);
+    color: var(--bg-color-body);
   }
 
   .description {

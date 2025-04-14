@@ -17,35 +17,21 @@ const projects: Project[] = [
     slug: "portfolio",
     description:
       "Un site personnel mettant en avant mes compétences et projets.",
-    image: "https://picsum.photos/300/200",
+    image: "/images/project_portfolio.jpg",
   },
   {
     title: "Application Mobile d'Emargement",
     slug: "app-mobile",
     description:
-      "Une application React Native pour gérer les tâches quotidiennes.",
-    image: "https://picsum.photos/300/200",
+      "Une application React Native pour l'émargements des apprenants.",
+    image: "/images/project_mobile.jpg",
   },
   {
     title: "Système d'Émargement web",
     slug: "emargement",
     description: 
-      "Un projet permettant la gestion d'émargement en ligne ettttttttt.",
-    image: "https://picsum.photos/300/200",
-  },
-  {
-    title: "Application Mobile d'Emargement",
-    slug: "app-mobile",
-    description:
-      "Une application React Native pour gérer les tâches quotidiennes.",
-    image: "https://picsum.photos/300/200",
-  },
-  {
-    title: "Application Mobile d'Emargement",
-    slug: "app-mobile",
-    description:
-      "Une application React Native pour gérer les tâches quotidiennes.",
-    image: "https://picsum.photos/300/200",
+      "Un projet permettant la gestion d'émargement en ligne.",
+    image: "/images/project_emargement.jpg",
   },
 ];
 

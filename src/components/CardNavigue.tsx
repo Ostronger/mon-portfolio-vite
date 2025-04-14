@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './CardNavigue.module.css';
-import Coco from './../assets/Design_sans_titre.png';
+
 
 interface Product {
   title: string;
@@ -42,7 +42,7 @@ const CardNavigue: React.FC = () => {
         "Mon parcours est motivé par une volonté claire : acquérir des compétences solides en développement web et mobile et progresser continuellement dans ce domaine en constante évolution.",
         "Ce portfolio est le reflet de mon apprentissage, de mes projets et de ma motivation. Envie d’échanger ? N’hésitez pas à me contacter."
       ],
-      imageUrl: Coco,
+      imageUrl: "/images/moi_meme.jpeg",
     },
     {
       title: "Mes Compétences",

@@ -11,7 +11,6 @@ const VeilleTechnologique: React.FC = () => {
     "https://www.zdnet.fr/actualites/rss/",
     "https://www.lemonde.fr/technologies/rss_full.xml",
     "https://www.village-justice.com/rss/articles.xml",
-    "https://www.sciencesetavenir.fr/rss.xml",
     "https://www.numerama.com/feed/",
 
   ];

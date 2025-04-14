@@ -9,7 +9,7 @@
     margin: 20px;
     cursor: pointer;
     font-size: 1rem;
-    color: var(--Primary-500, #FA8232);
+    color: var(--text-color);
     font-weight: bold;
     align-self: flex-start;
     transition: color 0.3s ease;
