@@ -20,7 +20,7 @@ const Contact: React.FC = () => {
         action="/success"
         className={styles.form}>
 
-            <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="contact" />
 
           <label htmlFor="name">Nom et prénom</label>
           <input
