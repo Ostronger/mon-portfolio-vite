@@ -16,8 +16,8 @@ const Contact: React.FC = () => {
         <form 
         name="contact"
         method="POST"
-        action="/success"
         data-netlify="true"
+        action="/success"
         className={styles.form}>
 
             <input type="hidden" name="form-name" value="contact" />
