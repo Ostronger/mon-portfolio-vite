@@ -13,7 +13,15 @@ const Contact: React.FC = () => {
           Si vous avez des questions ou des suggestions, n’hésitez pas à m'envoyer un message.
         </p>
 
-        <form className={styles.form}>
+        <form 
+        name="contact"
+        method="POST"
+        action="/success"
+        data-netlify="true"
+        className={styles.form}>
+
+            <input type="hidden" name="form-name" value="contact" />
+
           <label htmlFor="name">Nom et prénom</label>
           <input
             type="text"

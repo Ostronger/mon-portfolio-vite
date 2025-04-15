@@ -7,6 +7,7 @@ import Projects from './pages/Projects';
 import BtsSio from './pages/BtsSio';
 import ProjectDetail from './pages/ProjectDetail';
 import Contact from './pages/Contact';
+import SuccessPage from './pages/SuccessPage';
 
 export interface Route {
   path: string;
@@ -22,6 +23,7 @@ export const allRoutes: Route[] = [
   { path: '/projects/:slug', element: <ProjectDetail /> },
   { path: '/veille', label: 'Veille Technologique', element: <VeilleTechnologique /> },
   { path: '/contact', label: 'Contact', element: <Contact/> },
+  { path: '/success', element: <SuccessPage /> },
   { path: '*', label: '404', element: <NotFoundPage /> }
 ];
 
