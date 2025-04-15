@@ -46,10 +46,14 @@ export interface ProjectDetailData {
           }
         ],
         images: [
-          { url: "https://picsum.photos/600/300?2", legende: "Interface principale de l’application" },
-          { url: "https://loremflickr.com/1280/720", legende: "Vue mobile de la liste des tâches" }
+          { url: "/images/project_mobile_emargement1.png", legende: "Page de connexion de l'application" },
+          { url: "/images/project_mobile_emargement2.png", legende: "Page de signatue" },
+          { url: "/images/project_mobile_emargement3.png", legende: "Page du planning" }
         ],
-        technologies: ["React Native", "Expo", "TypeScript"]
+        technologies: ["React Native", "Expo", "TypeScript"],
+        links: [
+          { label: "Code source", url: "https://github.com/Ostronger/Emargement-reactNative.git" }
+        ]
       },
       {
         slug: "emargement",
@@ -63,10 +67,13 @@ export interface ProjectDetailData {
           }
         ],
         images: [
-          { url: "https://picsum.photos/600/300?3", legende: "Vue de l’interface d’émargement" },
-          { url: "https://loremflickr.com/1280/720", legende: "Suivi des présences par session" }
+          { url: "/images/btssio_ppemargeweb3.png", legende: "Vue de la page d'accueil administrateur" },
+          { url: "/images/projet_emargement_formateur.png", legende: "Suivi des présences par session cotés formateur" }
         ],
-        technologies: ["Symfony", "PHP", "MySQL"]
+        technologies: ["Symfony", "PHP", "MySQL"],
+        links: [
+          { label: "Code source", url: "https://github.com/Ostronger/emargement-symfony.git" }
+        ]
       }
   ];
   
