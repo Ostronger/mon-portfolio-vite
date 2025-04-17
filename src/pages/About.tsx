@@ -166,7 +166,7 @@ const About: React.FC = () => {
             <h2>Mon CV</h2>
             <div className={styles.linkGroup}>
               <a
-                href="https://drive.google.com/file/d/1Llc88ZFFtMj0zNbAmWmsnw7RTbYterut/view?usp=sharing"
+                href="https://drive.google.com/file/d/13ed4VpbieAcrlxuKuphqrNpld0g6T3Nc/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.linkButton}
