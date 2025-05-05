@@ -27,10 +27,11 @@ const Footer: React.FC = () => {
         {/* Section droite - Réseaux sociaux */}
         <div className={styles.right}>
           <a href="https://github.com/Ostronger" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>GitHub <VscGithubInverted /></a>
-          <a href="www.linkedin.com/in/lukamba-aristote-kasa-577594324" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>LinkedIn <FaLinkedin /></a>
+          <a href="https://www.linkedin.com/in/lukamba-aristote-kasa-577594324/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>LinkedIn <FaLinkedin /></a>
         </div>
       </div>
     </footer>
+    
   );
 };
 
