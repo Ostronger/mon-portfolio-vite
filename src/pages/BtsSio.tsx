@@ -73,6 +73,14 @@ const BtsSio: React.FC = () => {
             qui évalue non seulement la pertinence technique, mais aussi la
             clarté et la qualité de la communication du candidat.
           </p>
+          <p>
+            Vous pouvez consulter mon <strong>tableau de synthèse E5 (Annexe 8-1)</strong>, qui regroupe l’ensemble de mes réalisations professionnelles et les compétences mobilisées dans le cadre de l’épreuve :
+          </p>
+          <div>
+            <a href="https://drive.google.com/file/d/1UBWXfxPwAp-vELBeRfvhG-8hMJUs3OJU/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <button className={styles.documentLink}> Télécharger le tableau de synthèse E5 – Annexe 8-1</button>
+            </a>
+          </div>
         </section>
 
         {/* Mes réalisations */}
@@ -105,8 +113,8 @@ const BtsSio: React.FC = () => {
 
                 Chaque salle de formation a fait l’objet d’un devis détaillé incluant :
 
-                • Le choix des équipements  
-                • La configuration logicielle et matérielle  
+                • Le choix des équipements (PC, imprimantes, périphériques...) 
+                • Les configurations logicielles et matérielles  
                 • La mise en place des solutions de stockage et de sauvegarde  
 
 
@@ -125,6 +133,10 @@ const BtsSio: React.FC = () => {
                   {
                     label: "Documentation technique",
                     url: "https://drive.google.com/file/d/1LfmokhXqy1i1aMJqKh2J8egA8YTBFc2b/view?usp=sharing",
+                  },
+                  {
+                    label: "Dossier d'analyse des besoins et préconisations",
+                    url: "https://drive.google.com/file/d/12c80uusbtJw5q9fBgKLUwo6raW-65OEi/view?usp=sharing",
                   },
                 ],
               },
@@ -159,7 +171,7 @@ const BtsSio: React.FC = () => {
                   },
                   {
                     label: "Rapport de projet",
-                    url: "https://docs.google.com/document/d/1drG3C55X7NyJl5cRP3PmMSDuf105UAcdmez1J9Jl1XM/edit?usp=sharing",
+                    url: "https://drive.google.com/file/d/1VU3P8lgOGaLAXKBpWQexWYQcJBG9B0BG/view?usp=sharing",
                   },
                 ],
               },
@@ -199,6 +211,10 @@ const BtsSio: React.FC = () => {
                   {
                     label: "Documentation",
                     url: "https://atom-porpoise-e92.notion.site/Projets-d-margement-195cf6ffbb2180c38dedc08e83b4a523",
+                  },
+                  {
+                    label: "Documentation utilisateur – Interface administrateur",
+                    url: "https://drive.google.com/file/d/1bWlAidQ5m0eZ-u8eCXlFYq7oR_VjALH9/view?usp=sharing",
                   },
                 ],
               },
@@ -300,7 +316,7 @@ const BtsSio: React.FC = () => {
                 links: [
                   {
                     label: "Voir le rapport PDF",
-                    url: "https://exemple.com/rapport-forma-si1.pdf",
+                    url: "https://drive.google.com/file/d/1J48k6t0Iuc1KKV88wenrx_5Rn7udAop6/view?usp=drive_link",
                   },
                 ],
               },
@@ -345,7 +361,7 @@ const BtsSio: React.FC = () => {
                 links: [
                   {
                     label: "Voir le rapport PDF",
-                    url: "https://exemple.com/rapport-forma-si1.pdf",
+                    url: "https://drive.google.com/file/d/1BCyFNPda6vraJV_-b8OEfHjpjhs1wGeq/view?usp=drive_link",
                   },
                 ],
               },

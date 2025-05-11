@@ -28,4 +28,4 @@ export const allRoutes: Route[] = [
 ];
 
 // ⬇️ Uniquement les routes avec un label pour la navbar
-export const navRoutes = allRoutes.filter(route => route.label);
+export const navRoutes = allRoutes.filter(route => route.label); 
